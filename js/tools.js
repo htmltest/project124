@@ -82,6 +82,8 @@ $(document).ready(function() {
         dots: false,
         autoplay: true,
         autoplaySpeed: 0,
+        pauseOnHover: false,
+        pauseOnFocus: false,
         speed: 5000,
         cssEase: 'linear'
     });
@@ -267,6 +269,26 @@ $(window).on('load resize', function() {
         var curTop = curBlock.offset().top;
 
         $('.main-news-item a').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    $('.news-item a').css({'min-height': '0px'});
+
+    $('.news-item a').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        $('.news-item a').each(function() {
             var otherBlock = $(this);
             if (otherBlock.offset().top == curTop) {
                 var newHeight = otherBlock.height();

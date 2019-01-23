@@ -24,6 +24,7 @@ img {border:none; max-width:100%; max-height:100%; width:auto; height:auto}
 strong {font-weight:bold}
 
 h1 {margin:15px 0 21px 0; padding:0; font-weight:bold; font-size:45px; line-height:50px; color:#000}
+h1 span {font-size:12px; letter-spacing:0.48px; text-transform:uppercase; vertical-align:top; display:inline-block; margin-top:-2px}
 h2 {margin:32px 0 21px 0; padding:0; font-weight:bold; font-size:20px; line-height:28px; color:#000}
 h1+h2 {margin-top:21px}
 p {margin:21px 0; padding:0}
@@ -51,6 +52,7 @@ hr {margin:40px 0 30px 0; padding:0; border:none; height:3px; background:#f1efef
 
 .btn-red {color:#fff}
 .btn-red::before {background:#e3000f; opacity:1}
+.btn-red::after {background:#c40007}
 @media screen and (min-width:1200px) {
     .btn-red:hover {color:#fff}
 }
@@ -280,7 +282,8 @@ header {background:#100d13; position:relative; z-index:20}
     .mobile-menu-open .header-social {float:none; position:absolute; left:0; bottom:67px; width:auto; right:0; padding:0}
 }
 
-.header-menu {border-bottom:4px solid #a7a5ab; padding:11px 0 0 0}
+.header-menu {border-bottom:4px solid #a5a3a9; padding:11px 0 0 0}
+.main-page .header-menu {border-bottom-color:#261f2a}
 .header-menu ul {margin:0; padding:0; list-style:none; text-align:justify; text-transform:uppercase; font-size:12px; height:43px; font-weight:bold; letter-spacing:0.48px}
 .header-menu ul::after {content:""; display:inline-block; width:100%}
 .header-menu ul li {display:inline-block; vertical-align:top; margin:0; padding:0; position:relative}
@@ -608,9 +611,11 @@ header {background:#100d13; position:relative; z-index:20}
 .main-results-item-date {font-size:12px; line-height:21px; letter-spacing:0.48px; text-transform:uppercase; font-weight:bold; color:#757176}
 .main-results-item-title {font-size:13px; line-height:21px; letter-spacing:0; font-weight:bold; color:#fff; margin:6px 0 0 0}
 .main-results-item-title span {color:#e3000f; margin:0 0 0 3px}
+.main-results-item-title em {font-style:normal; opacity:0}
 @media screen and (min-width:1200px) {
     .main-results-item a:hover .main-results-item-date {color:#e3000f}
     .main-results-item a:hover .main-results-item-title {color:#e3000f}
+    .main-results-item a:hover .main-results-item-title em {opacity:1}
 }
 
 .main-events {background:url(../images/main-bg-2.png) no-repeat right 345px}
@@ -1177,6 +1182,194 @@ header {background:#100d13; position:relative; z-index:20}
 
 @media screen and (max-width:767px) {
     .main-partner {width:50%}
+}
+
+.content-wrap {float:left; width:100%; padding:0 399px 0 0}
+
+@media screen and (max-width:1199px) {
+    .content-wrap {float:none; width:auto; padding:0}
+}
+
+.content-side {float:left; width:357px; margin:0 0 0 -357px; padding:6px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .content-side {float:none; width:auto; margin:40px 0 0 0; padding:0}
+}
+
+.management-list {margin:-38px -27px 0 -27px; font-size:0; line-height:0; letter-spacing:-1px}
+.management-item {display:inline-block; vertical-align:top; width:50%; padding:0 27px}
+.management-item a {color:#000; display:block; position:relative; overflow:hidden; padding:44px 0 34px 0}
+@media screen and (min-width:1200px) {
+    .management-item a:hover {color:#e3000f}
+}
+.management-item a::before {content:""; display:block; height:4px; position:absolute; left:0; bottom:0; right:0; background:#ececec}
+.management-item a::after {content:""; display:block; height:4px; position:absolute; left:0; width:0; bottom:0; background:#e3000f; transition:all 0.4s}
+@media screen and (min-width:1200px) {
+    .management-item a:hover::after {width:100%}
+}
+.management-item-photo {float:left; width:78px; position:relative; margin:4px 0 0 0}
+.management-item-photo::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; opacity:0; background:#e3000f; transition:all 0.4s}
+@media screen and (min-width:1200px) {
+    .management-item a:hover .management-item-photo::after {opacity:0.5}
+}
+.management-item-photo+.management-item-content {margin:0 0 0 99px}
+.management-item-post {font-weight:bold; font-size:12px; line-height:21px; letter-spacing:0.48px; text-transform:uppercase; color:#908c95; position:relative}
+@media screen and (min-width:1200px) {
+    .management-item a:hover .management-item-post {color:#e3000f}
+}
+.management-item-name {font-weight:bold; font-size:20px; line-height:28px; letter-spacing:0; padding:12px 0 0 0; position:relative}
+
+@media screen and (max-width:767px) {
+    .management-list {margin:-28px 0 0 0}
+    .management-item {display:block; width:auto; padding:0}
+    .management-item a {padding:28px 0 30px 0}
+    .management-item-photo {margin:2px 0 0 0}
+    .management-item-post {line-height:16px}
+    .management-item-name {font-size:18px; line-height:24px; padding:16px 0 0 0}
+}
+
+.side-rating {background:#f3f3f3 url(../images/side-rating-table.png) repeat-x}
+.side-rating h2 {margin:0; padding:29px 0 0 34px}
+.side-rating-table {padding:6px 0 0 0}
+.side-rating-table table {width:100%; border-collapse:collapse}
+.side-rating-table th {font-weight:bold; font-size:12px; color:#000; text-align:center; vertical-align:middle; letter-spacing:0.24px; height:34px; padding:0}
+.side-rating-table th:nth-child(4) {background:#eee}
+.side-rating-table th:nth-child(5) {padding:0 0 0 21px; text-align:left}
+.side-rating-table td {font-weight:bold; font-size:13px; color:#000; text-align:center; vertical-align:middle; letter-spacing:0.36px; height:34px; padding:0}
+.side-rating-table tr.active td {background:#e3000f; color:#fff}
+.side-rating-table td:nth-child(1) {font-weight:normal; width:65px; padding:0 0 0 35px; text-align:left; color:#989898}
+.side-rating-table tr.active td:nth-child(1) {color:#fff}
+.side-rating-table td:nth-child(2) {font-weight:normal; text-align:left}
+.side-rating-table td:nth-child(3) {width:33px}
+.side-rating-table td:nth-child(4) {width:33px; background:#eee}
+.side-rating-table tr.active td:nth-child(4) {background:#c40007}
+.side-rating-table td:nth-child(5) {width:70px; padding:0 0 0 15px; text-align:left}
+
+@media screen and (max-width:767px) {
+    .side-rating {margin:0 -20px}
+    .side-rating h2 {padding:29px 0 0 20px}
+    .side-rating-table td:nth-child(1) {width:50px; padding:0 0 0 20px}
+    .side-rating-table td:nth-child(5) {width:50px}
+}
+
+.side-partner {margin:40px 0 0 0}
+.side-partner a {display:block; height:159px; line-height:159px; text-align:center; background:#f3f3f3}
+.side-partner img {vertical-align:middle}
+
+@media screen and (max-width:767px) {
+    .side-partner {margin:30px -20px 0 -20px}
+}
+
+.persone {margin:61px 0 0 0}
+.persone::after {content:""; display:block; clear:both}
+
+@media screen and (max-width:1199px) {
+    .persone {margin:22px 0 0 0}
+}
+
+.persone-photo {float:right; width:668px; line-height:0}
+.persone-photo img {display:block; width:100%}
+
+@media screen and (max-width:1199px) {
+    .persone-photo {float:none; width:auto; margin:0 -40px; background:#fff; text-align:center}
+    .persone-photo img {display:inline-block; width:auto; max-height:484px}
+}
+
+@media screen and (max-width:767px) {
+    .persone-photo {margin:0 -20px}
+    .persone-photo img {max-height:310px}
+}
+
+.persone-content {float:left; width:483px; color:#000}
+.persone-content > h2:first-child {margin:-41px 0 -8px 0}
+
+@media screen and (max-width:1199px) {
+    .persone-content {float:none; width:auto}
+    .persone-content > h2:first-child {margin:32px 0 21px 0}
+}
+
+.persone-info {border:4px solid #ececec; margin:21px 0; padding:18px 40px 38px 40px}
+.persone-info table {width:100%; border-collapse:collapse}
+.persone-info table td {vertical-align:top; padding:12px 0 10px 0; border-top:2px solid #ededed; font-weight:bold}
+.persone-info table tr:first-child td {border-top:none}
+.persone-info table td:nth-child(1) {color:#908c95; text-transform:uppercase; font-size:12px; letter-spacing:0.48px}
+.persone-info table td:nth-child(2) {padding-left:20px}
+
+@media screen and (max-width:767px) {
+    .persone-info {padding:21px 40px 29px 40px}
+    .persone-info table {display:block}
+    .persone-info table tbody {display:block}
+    .persone-info table tr {display:block; border-top:2px solid #ededed; padding:7px 0 10px 0}
+    .persone-info table tr:first-child {border-top:none}
+    .persone-info table td {display:block; border-top:none; padding:0}
+    .persone-info table td:nth-child(1) {}
+    .persone-info table td:nth-child(2) {padding-left:0; line-height:17px}
+}
+
+.partners {font-size:0; line-height:0; letter-spacing:-1px; border:4px solid #ececec; padding:30px 90px 27px 90px; text-align:center}
+.partners-item {display:inline-block; vertical-align:top; padding:0 10px 30px 10px; width:33.33%}
+.partners-item-main {width:100%}
+.partners-item a {display:inline-block; vertical-align:top; color:#e3000f}
+@media screen and (min-width:1200px) {
+    .partners-item a:hover {color:#c40007}
+}
+.partners-item-logo {line-height:138px; height:138px}
+.partners-item-main .partners-item-logo {display:inline-block; vertical-align:middle; height:auto; line-height:0}
+.partners-item-logo img {vertical-align:middle}
+.partners-item-title {font-size:13px; line-height:21px; letter-spacing:0}
+.partners-item-main .partners-item-title {display:inline-block; vertical-align:middle; text-align:left; padding:0 0 0 40px}
+.partners-item-main .partners-item-title span {display:block; color:#000}
+
+@media screen and (max-width:1199px) {
+    .partners {padding:30px 30px 27px 30px}
+}
+
+@media screen and (max-width:767px) {
+    .partners {padding:30px 0 17px 0}
+    .partners-item {width:100%; padding:0 10px 40px 10px}
+    .partners-item-logo {line-height:0; height:auto}
+    .partners-item-main .partners-item-logo {display:block}
+    .partners-item-title {padding:20px 0 0 0}
+    .partners-item-main .partners-item-title {display:block; padding:20px 0 0 0; text-align:center}
+}
+
+.news-list {margin:0 -27px; font-size:0; line-height:0; letter-spacing:-1px}
+.news-item {display:inline-block; vertical-align:top; width:50%; padding:0 27px}
+.news-item a {color:#000; display:block; position:relative}
+@media screen and (min-width:1200px) {
+    .news-item a:hover {color:#e3000f}
+}
+.news-item a::before {content:""; display:block; height:4px; position:absolute; left:0; bottom:0; right:0; background:#ececec}
+.news-item a::after {content:""; display:block; height:4px; position:absolute; left:0; width:0; bottom:0; background:#e3000f; transition:all 0.4s}
+@media screen and (min-width:1200px) {
+    .news-item a:hover::after {width:100%}
+}
+.news-item-photo {position:absolute; left:-30px; top:-4px; right:-30px; bottom:0; background:no-repeat center; background-size:cover; opacity:0; transition:all 0.4s}
+.news-item-photo::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:#f9f9f9; opacity:0.8}
+@media screen and (min-width:1200px) {
+    .news-item a:hover .news-item-photo {opacity:1}
+}
+.news-item-date {font-weight:bold; font-size:12px; line-height:21px; letter-spacing:0.48px; text-transform:uppercase; color:#aaa3ad; position:relative; padding:44px 0 0 0}
+.news-item-date span {display:inline-block; vertical-align:middle; padding:0 0 0 17px; position:relative}
+.news-item-date span::before {content:""; display:inline-block; vertical-align:middle; margin:2px 4px 0 0; width:13px; height:13px; background:url(../images/news-item-date-comments.png)}
+@media screen and (min-width:1200px) {
+    .news-item a:hover .news-item-date {color:#e3000f}
+}
+.news-item-title {font-weight:bold; font-size:20px; line-height:28px; letter-spacing:0; padding:16px 0 37px 0; position:relative}
+
+@media screen and (max-width:1199px) {
+    .news-list {margin:0}
+    .news-item {display:block; width:auto; padding:0; position:relative}
+    .news-item::before {content:""; display:block; position:absolute; right:20px; top:50%; width:21px; height:37px; background:url(../images/main-news-item.png); margin-top:-18px}
+    .news-item a {padding:0 61px 0 0}
+    .news-item-date {padding:34px 0 0 0}
+    .news-item-title {font-size:18px; line-height:24px; padding:12px 0 28px 0}
+}
+
+@media screen and (max-width:767px) {
+    .news-item::before {display:none}
+    .news-item a {padding:0}
+    .news-item-title {padding:17px 0 33px 0}
 }
 
 footer {background:#201b24; height:473px; margin:-473px 0 0 0; position:relative}
