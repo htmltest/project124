@@ -195,6 +195,86 @@ $(document).ready(function() {
         }
     });
 
+    $('.news-filter-param-value').click(function() {
+        var curSelect = $(this).parents().filter('.news-filter-param');
+        if (curSelect.hasClass('open')) {
+            curSelect.removeClass('open');
+        } else {
+            $('.news-filter-param.open').removeClass('open');
+            curSelect.addClass('open');
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.news-filter-param').length == 0) {
+            $('.news-filter-param.open').removeClass('open');
+        }
+    });
+
+    $('.news-filter-param ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            var curSelect = $(this).parents().filter('.news-filter-param');
+            curSelect.find('.news-filter-param-value span').html($(this).html());
+            curSelect.removeClass('open');
+        }
+    });
+
+    $('.content-header-filter-current').click(function() {
+        var curSelect = $(this).parents().filter('.content-header-filter');
+        curSelect.toggleClass('open');
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.content-header-filter').length == 0) {
+            $('.content-header-filter.open').removeClass('open');
+        }
+    });
+
+    $('.content-header-filter ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            var curSelect = $(this).parents().filter('.content-header-filter');
+            curSelect.find('.content-header-filter-current span').html($(this).html());
+            curSelect.removeClass('open');
+        }
+    });
+
+    $('.gallery-big').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="45px" height="86px" viewBox="0 0 28 51"><path d="M27.035,49.100 L25.131,50.994 L0.001,25.996 L0.504,25.495 L0.001,24.994 L25.131,-0.002 L27.035,1.892 L3.307,25.495 L27.035,49.100 Z"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="45px" height="86px" viewBox="0 0 28 51"><path d="M27.998,25.996 L2.868,50.994 L0.964,49.100 L24.692,25.495 L0.964,1.892 L2.868,-0.002 L27.998,24.994 L27.495,25.495 L27.998,25.996 Z"/></svg></button>',
+        dots: false,
+        asNavFor: '.gallery-preview-inner'
+    }).on('setPosition', function(event, slick) {
+        var curIndex = $('.gallery-big').slick('slickCurrentSlide');
+        $('.gallery-preview-item').removeClass('active');
+        $('.gallery-preview-item').eq(curIndex).addClass('active');
+        $('.gallery-counter span').eq(0).html(curIndex + 1);
+        $('.gallery-counter span').eq(1).html($('.gallery-big-item').length);
+    }).on('beforeChange', function(event, slick, currentSlide) {
+        $('.gallery-preview-item.active').removeClass('active');
+    }).on('afterChange', function(event, slick, currentSlide) {
+        $('.gallery-preview-item').eq(currentSlide).addClass('active');
+        $('.gallery-counter span').eq(0).html(currentSlide + 1);
+    });
+
+    $('.gallery-preview-inner').slick({
+        infinite: false,
+        slidesToScroll: 1,
+        arrows: false,
+        variableWidth: true,
+        dots: false,
+        centerMode: true
+    });
+
+    $('.gallery-preview-item').click(function() {
+        var curIndex = $('.gallery-preview-item').index($(this));
+        $('.gallery-big').slick('slickGoTo', curIndex);
+    });
+
 });
 
 function initForm(curForm) {
@@ -289,6 +369,26 @@ $(window).on('load resize', function() {
         var curTop = curBlock.offset().top;
 
         $('.news-item a').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    $('.photos-item-title').css({'min-height': '0px'});
+
+    $('.photos-item-title').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        $('.photos-item-title').each(function() {
             var otherBlock = $(this);
             if (otherBlock.offset().top == curTop) {
                 var newHeight = otherBlock.height();
