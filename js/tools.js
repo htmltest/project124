@@ -275,6 +275,44 @@ $(document).ready(function() {
         $('.gallery-big').slick('slickGoTo', curIndex);
     });
 
+    $('body').on('click', '.main-games-item-inner[data-href]', function() {
+        window.location = $(this).attr('data-href');
+    });
+
+    $('body').on('mouseover', '.main-games-item-inner[data-href] a', function() {
+        $('body').off('click', '.main-games-item-inner[data-href]');
+    });
+
+    $('body').on('mouseout', '.main-games-item-inner[data-href] a', function() {
+        $('body').on('click', '.main-games-item-inner[data-href]', function() {
+            window.location = $(this).attr('data-href');
+        });
+    });
+
+    $('body').on('click', '.side-game[data-href]', function() {
+        window.location = $(this).attr('data-href');
+    });
+
+    $('body').on('mouseover', '.side-game[data-href] a', function() {
+        $('body').off('click', '.side-game[data-href]');
+    });
+
+    $('body').on('mouseout', '.side-game[data-href] a', function() {
+        $('body').on('click', '.side-game[data-href]', function() {
+            window.location = $(this).attr('data-href');
+        });
+    });
+
+    $('.guestbook-item-date a').click(function(e) {
+        $(this).parents().filter('.guestbook-item').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $('.team-item-arrow').click(function(e) {
+        $(this).parent().toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {
