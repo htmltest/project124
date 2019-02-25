@@ -53,6 +53,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.window-link-self', function(e) {
+        windowOpenSelf($(this).attr('href'));
+        e.preventDefault();
+    });
+
     $('body').on('keyup', function(e) {
         if (e.keyCode == 27) {
             windowClose();
@@ -357,6 +362,37 @@ function windowOpen(linkWindow, dataWindow) {
     });
 }
 
+
+function windowOpenSelf(linkWindow) {
+    var curPadding = $('.wrapper').width();
+    $('html').addClass('window-open');
+    curPadding = $('.wrapper').width() - curPadding;
+    $('body').css({'margin-right': curPadding + 'px'});
+
+    if ($('.window').length == 0) {
+        $('body').append('<div class="window"><div class="window-loading"></div></div>')
+    }
+
+    var html = $(linkWindow).html();
+    if ($('.window').length > 0) {
+        $('.window').append('<div class="window-container"><div class="window-content">' + html + '<a href="#" class="window-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path d="M18.492,17.543 L17.547,18.490 L11.000,11.943 L4.453,18.490 L3.508,17.543 L10.054,10.997 L3.508,4.450 L4.453,3.505 L11.000,10.051 L17.547,3.505 L18.492,4.450 L11.946,10.997 L18.492,17.543 Z"/></svg></a></div></div>')
+
+        windowPosition();
+
+        $('.window input[id]').each(function() {
+            $(this).attr('id', $(this).attr('id') + '_window');
+        });
+
+        $('.window input[equalTo]').each(function() {
+            $(this).attr('equalTo', $(this).attr('equalTo') + '_window');
+        });
+
+        $('.window form').each(function() {
+            initForm($(this));
+        });
+    }
+}
+
 function windowPosition() {
     if ($('.window').length > 0) {
         $('.window .window-container').css({'left': '50%', 'margin-left': -$('.window .window-container').width() / 2});
@@ -379,14 +415,34 @@ function windowClose() {
 }
 
 $(window).on('load resize', function() {
-    $('.main-news-item a').css({'min-height': '0px'});
+    $('.main-news-item > a').css({'min-height': '0px'});
 
-    $('.main-news-item a').each(function() {
+    $('.main-news-item > a').each(function() {
         var curBlock = $(this);
         var curHeight = curBlock.height();
         var curTop = curBlock.offset().top;
 
-        $('.main-news-item a').each(function() {
+        $('.main-news-item > a').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    $('.main-news-item-inner').css({'min-height': '0px'});
+
+    $('.main-news-item-inner').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        $('.main-news-item-inner').each(function() {
             var otherBlock = $(this);
             if (otherBlock.offset().top == curTop) {
                 var newHeight = otherBlock.height();
@@ -430,6 +486,26 @@ $(window).on('load resize', function() {
             var otherBlock = $(this);
             if (otherBlock.offset().top == curTop) {
                 var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    $('.main-games-item-inner').css({'min-height': '0px'});
+
+    $('.main-games-item-inner').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.outerHeight();
+        var curTop = curBlock.offset().top;
+
+        $('.main-games-item-inner').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.outerHeight();
                 if (newHeight > curHeight) {
                     curBlock.css({'min-height': newHeight + 'px'});
                 } else {

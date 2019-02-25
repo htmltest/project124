@@ -37,8 +37,120 @@
                             <a href="#" class="mobile-menu-link"><span class="mobile-menu-link-inner"></span></a>
 
                             <div class="header-btns">
-                                <a href="windows/login.html" class="btn window-link"><span>Вход</span></a>
-                                <a href="windows/registration.html" class="btn window-link"><span>Регистрация</span></a>
+                                <a href="#auth" class="btn window-link-self"><span>Вход</span></a>
+                                <a href="#reg" class="btn window-link-self"><span>Регистрация</span></a>
+                            </div>
+
+                            <div id="auth" style="display:none">
+                                <div class="window-login">
+                                    <div class="window-title">
+                                        <ul>
+                                            <li><span>Вход</span></li>
+                                            <li><a href="#reg" class="window-link-self">Регистрация</a></li>
+                                        </ul>
+                                    </div>
+                                    <form action="#" method="post" autocomplete="off">
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Логин</div>
+                                                <div class="form-input"><input type="text" name="login" value="" class="required" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Пароль</div>
+                                                <div class="form-input"><input type="password" name="password" value="" class="required" autocomplete="off" /></div>
+                                                <div class="window-login-forgot-link"><a href="#">Забыли пароль?</a></div>
+                                            </div>
+                                            <div class="window-login-submit">
+                                                <button type="submit" class="btn btn-red"><span>Войти</span></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div id="reg" style="display:none">
+                                <div class="window-login">
+                                    <div class="window-title">
+                                        <ul>
+                                            <li><a href="#auth" class="window-link-self">Вход</a></li>
+                                            <li><span>Регистрация</span></li>
+                                        </ul>
+                                    </div>
+                                    <form action="#" method="post" autocomplete="off">
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Фамилия <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="lastname" value="" class="required" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Имя <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="firstname" value="" class="required" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Отчество</div>
+                                                <div class="form-input"><input type="text" name="middlename" value="" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Электронная почта <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="email" value="" class="required email" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-field form-field-wide">
+                                                <div class="form-label">Номер телефона в федеральном формате <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="phone" value="" class="required phoneRU" autocomplete="off" /></div>
+                                                <div class="form-hint">Пример: +79089925070 (без пробелов и тире)</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-checkbox"><label><input type="checkbox" name="subscribe" checked="checked" /><span>Я хочу получать анонсы событий и новости на электронную почту</span></label></div>
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Город</div>
+                                                <div class="form-input"><input type="text" name="city" value="Владивосток" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Болельщик команды</div>
+                                                <div class="form-input"><input type="text" name="team" value="Спартак-Приморье" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Логин <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="login" value="" class="required" autocomplete="off" /></div>
+                                                <div class="form-hint">Логин будет отображаться в комментариях</div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Пароль <span>*</span></div>
+                                                <div class="form-input"><input type="password" name="password" value="" class="required" id="password" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Повторите пароль <span>*</span></div>
+                                                <div class="form-input"><input type="password" name="repassword" value="" equalTo="#password" autocomplete="off" /></div>
+                                                <div class="form-captcha">
+                                                    <div class="form-captcha-label">Защита от автоматических регистраций</div>
+                                                    <div class="form-captcha-input">
+                                                        <script src="https://www.google.com/recaptcha/api.js"></script>
+                                                        <div class="g-recaptcha" data-sitekey="6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="window-registration-submit">
+                                                    <button type="submit" class="btn btn-red"><span>зарегистрироваться</span></button>
+                                                </div>
+                                                <div class="form-required"><span>*</span> — поля, обязательны к заполнению</div>
+                                            </div>
+                                            <div class="registration-info">
+                                                <h2>Уважаемые болельщики!</h2>
+                                                <p>Регистрация на сайте БК "Спартак-Приморье" позволяет получить доступ к турниру прогнозов, зарегистрированные пользователи так же могут оставлять свои сообщения в&nbsp;гостевой книге и комментировать новости. Список интерактивных сервисов, доступных зарегистрированным пользователям, будет со временем расширяться.</p>
+                                                <p>Администрация сайта гарантирует, что указанные Вами данные не будут разглашены или переданы третьим лицам (кроме случаев, предусмотренных действующим законодательством Российской Федерации).</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
 
                             <div class="header-search">
@@ -518,8 +630,8 @@
                 <div class="container">
 
                     <div class="footer-btns">
-                        <a href="windows/login.html" class="btn window-link"><span>Вход</span></a>
-                        <a href="windows/registration.html" class="btn window-link"><span>Регистрация</span></a>
+                        <a href="#auth" class="btn window-link-self"><span>Вход</span></a>
+                        <a href="#reg" class="btn window-link-self"><span>Регистрация</span></a>
                     </div>
 
                     <div class="footer-social">
