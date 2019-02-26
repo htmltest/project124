@@ -44,6 +44,13 @@ $(document).ready(function() {
         }
     });
 
+    $.validator.addMethod('phoneRU',
+        function(phone_number, element) {
+            return this.optional(element) || phone_number.match(/^\+7\d{10}$/);
+        },
+        'Ошибка заполнения'
+    );
+
     $('form').each(function() {
         initForm($(this));
     });
@@ -336,12 +343,12 @@ function initForm(curForm) {
 }
 
 function windowOpen(linkWindow, dataWindow) {
-    var curPadding = $('.wrapper').width();
-    $('html').addClass('window-open');
-    curPadding = $('.wrapper').width() - curPadding;
-    $('body').css({'margin-right': curPadding + 'px'});
-
     if ($('.window').length == 0) {
+        var curPadding = $('.wrapper').width();
+        $('html').addClass('window-open');
+        curPadding = $('.wrapper').width() - curPadding;
+        $('body').css({'margin-right': curPadding + 'px'});
+
         $('body').append('<div class="window"><div class="window-loading"></div></div>')
     }
 
@@ -356,6 +363,10 @@ function windowOpen(linkWindow, dataWindow) {
 
         windowPosition();
 
+        grecaptcha.render($('.window .g-recaptcha')[0], {
+            'sitekey' : '6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA'
+        });
+
         $('.window form').each(function() {
             initForm($(this));
         });
@@ -364,18 +375,18 @@ function windowOpen(linkWindow, dataWindow) {
 
 
 function windowOpenSelf(linkWindow) {
-    var curPadding = $('.wrapper').width();
-    $('html').addClass('window-open');
-    curPadding = $('.wrapper').width() - curPadding;
-    $('body').css({'margin-right': curPadding + 'px'});
-
     if ($('.window').length == 0) {
+        var curPadding = $('.wrapper').width();
+        $('html').addClass('window-open');
+        curPadding = $('.wrapper').width() - curPadding;
+        $('body').css({'margin-right': curPadding + 'px'});
+
         $('body').append('<div class="window"><div class="window-loading"></div></div>')
     }
 
     var html = $(linkWindow).html();
     if ($('.window').length > 0) {
-        $('.window').append('<div class="window-container"><div class="window-content">' + html + '<a href="#" class="window-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path d="M18.492,17.543 L17.547,18.490 L11.000,11.943 L4.453,18.490 L3.508,17.543 L10.054,10.997 L3.508,4.450 L4.453,3.505 L11.000,10.051 L17.547,3.505 L18.492,4.450 L11.946,10.997 L18.492,17.543 Z"/></svg></a></div></div>')
+        $('.window').html('<div class="window-container"><div class="window-content">' + html + '<a href="#" class="window-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path d="M18.492,17.543 L17.547,18.490 L11.000,11.943 L4.453,18.490 L3.508,17.543 L10.054,10.997 L3.508,4.450 L4.453,3.505 L11.000,10.051 L17.547,3.505 L18.492,4.450 L11.946,10.997 L18.492,17.543 Z"/></svg></a></div></div>')
 
         windowPosition();
 
@@ -385,6 +396,10 @@ function windowOpenSelf(linkWindow) {
 
         $('.window input[equalTo]').each(function() {
             $(this).attr('equalTo', $(this).attr('equalTo') + '_window');
+        });
+
+        grecaptcha.render($('.window .g-recaptcha')[0], {
+            'sitekey' : '6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA'
         });
 
         $('.window form').each(function() {
