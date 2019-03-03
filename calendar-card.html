@@ -193,10 +193,10 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Команда</a></li>
-                                <li>
+                                <li class="active">
                                     <a href="#">Суперлига</a>
                                     <ul>
-                                        <li><a href="#">Турнирное положение</a></li>
+                                        <li class="active"><a href="#">Турнирное положение</a></li>
                                         <li><a href="#">Календарь | Результаты</a></li>
                                         <li><a href="#">Сводная статистика</a></li>
                                     </ul>
@@ -216,11 +216,11 @@
                                 <li><a href="#">Трансляция</a></li>
                                 <li><a href="#">Danceteam</a></li>
                                 <li><a href="#">Блоги</a></li>
-                                <li class="active">
+                                <li>
                                     <a href="#">Мультимедиа</a>
                                     <ul>
                                         <li><a href="#">Фото</a></li>
-                                        <li class="active"><a href="#">Видео</a></li>
+                                        <li><a href="#">Видео</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Гостевая</a></li>
@@ -330,291 +330,158 @@
                 <div class="content">
                     <!-- container -->
                     <div class="container">
-                        <div class="breadcrumbs"><a href="#">Главная</a> » <a href="#">Мультимедия</a> » Фото</div>
+                        <div class="breadcrumbs"><a href="#">Главная</a> » <a href="#">Суперлига</a> » Календарь | Результаты</div>
 
-                        <!-- content wrap -->
-                        <div class="content-wrap">
-
-                            <div class="content-header">
-                                <h1>Видео</h1>
-                                <div class="content-header-filter">
-                                    <div class="content-header-filter-current">Сезон: <span>2017/18</span></div>
-                                    <ul>
-                                        <li><a href="#">2016/17</a></li>
-                                        <li><a href="#">2015/16</a></li>
-                                        <li><a href="#">2014/15</a></li>
-                                    </ul>
+                        <!-- calendar filter -->
+                        <div class="calendar-filter">
+                            <form action="#" method="post">
+                                <div class="calendar-filter-block">
+                                    <div class="calendar-filter-select">
+                                        <div class="calendar-filter-select-current"><strong>Сезон:</strong><span>2017/18</span></div>
+                                        <ul>
+                                            <li><label><input type="radio" name="season" value="1" checked="checked" /><span>2017/18</span></label></li>
+                                            <li><label><input type="radio" name="season" value="2" /><span>2016/17</span></label></li>
+                                            <li><label><input type="radio" name="season" value="3" /><span>2015/16</span></label></li>
+                                            <li><label><input type="radio" name="season" value="4" /><span>2014/15</span></label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="calendar-filter-select">
+                                        <div class="calendar-filter-select-current"><strong>Команда:</strong><span>Спартак-Приморье</span></div>
+                                        <ul>
+                                            <li><label><input type="radio" name="team" value="1" checked="checked" /><span>Спартак-Приморье</span></label></li>
+                                            <li><label><input type="radio" name="team" value="2" /><span>Спартак СПб</span></label></li>
+                                            <li><label><input type="radio" name="team" value="3" /><span>ТЕМП-СУМЗ-УГМК</span></label></li>
+                                            <li><label><input type="radio" name="team" value="4" /><span>Самара</span></label></li>
+                                            <li><label><input type="radio" name="team" value="5" /><span>Восток-65</span></label></li>
+                                            <li><label><input type="radio" name="team" value="6" /><span>Новосибирск</span></label></li>
+                                            <li><label><input type="radio" name="team" value="7" /><span>Уралмаш</span></label></li>
+                                            <li><label><input type="radio" name="team" value="8" /><span>Урал</span></label></li>
+                                            <li><label><input type="radio" name="team" value="9" /><span>Иркут</span></label></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <!-- photos -->
-                            <div class="photos videos">
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-01.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Кубок России. 1/8 финала. «Спартак- Приморье» — «Спартак» СПб 70:81</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
+                                <div class="calendar-filter-sep"></div>
+                                <div class="calendar-filter-block">
+                                    <div class="calendar-filter-select">
+                                        <div class="calendar-filter-select-current"><strong>Матчи:</strong><span>Сыгранные</span></div>
+                                        <ul>
+                                            <li><label><input type="radio" name="type1" value="1" checked="checked" /><span>Сыгранные</span></label></li>
+                                            <li><label><input type="radio" name="type1" value="2" /><span>Будущие</span></label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="calendar-filter-select calendar-filter-select-without-title">
+                                        <div class="calendar-filter-select-current"><strong>Матчи:</strong><span>Домашние и гостевые</span></div>
+                                        <ul>
+                                            <li><label><input type="radio" name="type2" value="1" checked="checked" /><span>Домашние и гостевые</span></label></li>
+                                            <li><label><input type="radio" name="type2" value="2" /><span>Домашние</span></label></li>
+                                            <li><label><input type="radio" name="type2" value="3" /><span>Гостевые</span></label></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-02.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Мастер-классы в Арсеньеве, Кавалерово и Дальнегорске</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
+                                <div class="calendar-filter-sep"></div>
+                                <div class="calendar-filter-btns">
+                                    <button type="submit" class="btn btn-red"><span>показать <em>→</em></span></button>
+                                    <button type="reset" class="btn"><span>сбросить</span></button>
                                 </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-03.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Суперлига. «Спартак-Приморье» - «Иркут» 83:69</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-04.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Суперлига. «Урал» - «Спартак-Приморье» 73:81</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-05.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Кубок России. 1/8 финала. «Спартак- Приморье» — «Спартак» СПб 70:81</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-06.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Мастер-классы в Арсеньеве, Кавалерово и Дальнегорске</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-01.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Суперлига. «Спартак-Приморье» - «Иркут» 83:69</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-08.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Суперлига. «Урал» - «Спартак-Приморье» 73:81</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-05.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Кубок России. 1/8 финала. «Спартак- Приморье» — «Спартак» СПб 70:81</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-06.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Мастер-классы в Арсеньеве, Кавалерово и Дальнегорске</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-01.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Суперлига. «Спартак-Приморье» - «Иркут» 83:69</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                                <div class="photos-item">
-                                    <a href="#">
-                                        <div class="photos-item-preview">
-                                            <div class="photos-item-preview-big" style="background-image:url(files/video-08.jpg)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="46px"><path fill-rule="evenodd" d="M23.551,22.997 L23.998,23.449 L2.286,45.395 L2.286,45.999 L-0.000,45.999 L-0.000,-0.001 L1.690,-0.001 L1.691,-0.002 L1.692,-0.001 L2.286,-0.001 L2.286,0.599 L23.998,22.544 L23.551,22.997 ZM2.286,4.016 L2.286,41.977 L21.064,22.997 L2.286,4.016 Z"/></svg></div>
-                                        </div>
-                                        <div class="photos-item-title">Суперлига. «Урал» - «Спартак-Приморье» 73:81</div>
-                                        <div class="photos-item-date">12 мая 2018</div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- photos END -->
-
-                            <div class="pager">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#">5</a>
-                                <a href="#">6</a>
-                                <a href="#">7</a>
-                                <a href="#">8</a>
-                                <a href="#">9</a>
-                                <a href="#">10</a>
-                                <a href="#">11</a>
-                                <a href="#">12</a>
-                                <a href="#">13</a>
-                                <a href="#">14</a>
-                                <span>...</span>
-                                <a href="#">239</a>
-                            </div>
-
-                            <div class="pager-tablet">
-                                <a href="#"><span>Показать больше</span></a>
-                            </div>
-
+                            </form>
                         </div>
-                        <!-- content wrap END -->
+                        <!-- calendar filter END -->
 
-                        <!-- content side -->
-                        <div class="content-side">
+                        <h1>Суперлига — Первый дивизион</h1>
 
-                            <!-- news other -->
-                            <div class="news-other">
-                                <h2>Последние новости</h2>
-                                <div class="news-list">
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>12</span></div>
-                                            <div class="news-item-title">Какой чемпион чемпионистей</div>
-                                        </a>
-                                    </div>
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>1</span></div>
-                                            <div class="news-item-title">«Спартак-Приморье» подписал контракт с американским форвардом ДиАндре Дэниэлсом</div>
-                                        </a>
-                                    </div>
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>3</span></div>
-                                            <div class="news-item-title">«-1» перед ответным матчем во Владивостоке</div>
-                                        </a>
-                                    </div>
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>0</span></div>
-                                            <div class="news-item-title">Юноши «Спартака-Приморье» - лучшие на Дальнем Востоке</div>
-                                        </a>
-                                    </div>
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>0</span></div>
-                                            <div class="news-item-title">Максим Колюшкин: Попадание в число 12 игроков сборной - это хороший опыт</div>
-                                        </a>
-                                    </div>
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>3</span></div>
-                                            <div class="news-item-title">«-1» перед ответным матчем во Владивостоке</div>
-                                        </a>
-                                    </div>
-                                    <div class="news-item">
-                                        <a href="#">
-                                            <div class="news-item-date">12 мая 2018 | Новости <span>0</span></div>
-                                            <div class="news-item-title">Юноши «Спартака-Приморье» - лучшие на Дальнем Востоке</div>
-                                        </a>
-                                    </div>
+                        <!-- calendar cards -->
+                        <div class="calendar-cards">
+                            <!-- side game -->
+                            <div class="side-game" data-href="#">
+                                <div class="side-game-logos">
+                                    <img src="files/side-game-logo-1.png" alt="" />
+                                    <img src="files/side-game-logo-2.png" alt="" />
                                 </div>
-                            </div>
-                            <!-- news other END -->
-
-                            <!-- side results -->
-                            <div class="side-results">
-                                <h2>Последние результаты</h2>
-                                <div class="side-results-inner">
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Суперлига — Первый дивизион</div>
-                                        <div class="side-result-title">Химки-Подмосковье — Зенит-Фарм <span>79 : 70</span></div>
+                                <div class="side-game-result">67 : 87</div>
+                                <div class="side-game-date">23.09.2017, 19:00, СБ <span>ВВО</span></div>
+                                <div class="side-game-place">Владивосток, СК «Олимпиец»</div>
+                                <div class="side-game-ctrl">
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-5.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Интервью</div>
                                     </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Суперлига — Первый дивизион</div>
-                                        <div class="side-result-title">Новосибирск — Спартак-Приморье <span>87 : 67</span></div>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-6.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Превью</div>
                                     </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Кубок России — 1/2 чемпионата</div>
-                                        <div class="side-result-title">Самара — Купол-Родники <span>105 : 68</span></div>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-3.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Статистика</div>
                                     </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Кубок России — финал</div>
-                                        <div class="side-result-title">ЦСКА-2 — МБА <span>89 : 88</span></div>
-                                    </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Суперлига — Первый дивизион</div>
-                                        <div class="side-result-title">Химки-Подмосковье — Зенит-Фарм <span>79 : 70</span></div>
-                                    </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Суперлига — Первый дивизион</div>
-                                        <div class="side-result-title">Новосибирск — Спартак-Приморье <span>87 : 67</span></div>
-                                    </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Кубок России — 1/2 чемпионата</div>
-                                        <div class="side-result-title">Самара — Купол-Родники <span>105 : 68</span></div>
-                                    </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Кубок России — финал</div>
-                                        <div class="side-result-title">ЦСКА-2 — МБА <span>89 : 88</span></div>
-                                    </a>
-                                    <a href="#" class="side-result">
-                                        <div class="side-result-date">21.11.2018 | Суперлига — Первый дивизион</div>
-                                        <div class="side-result-title">Химки-Подмосковье — Зенит-Фарм <span>79 : 70</span></div>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-4.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Текстовый отчет</div>
                                     </a>
                                 </div>
                             </div>
-                            <!-- side results END -->
+                            <!-- side game END -->
 
-                            <div class="main-social-item">
-                                <script src="https://vk.com/js/api/openapi.js?160" type="text/javascript"></script>
-                                <div class="main-social-item-inner" id="main-social-vk">
-                                    <div id="vk_groups"></div>
-                                    <script type="text/javascript">
-                                        VK.Widgets.Group("vk_groups", {mode: 0, width: 'auto', height: "290"}, 735945);
-                                    </script>
+                            <!-- side game -->
+                            <div class="side-game" data-href="#">
+                                <div class="side-game-logos">
+                                    <img src="files/side-game-logo-1.png" alt="" />
+                                    <img src="files/side-game-logo-2.png" alt="" />
+                                </div>
+                                <div class="side-game-result">67 : 87</div>
+                                <div class="side-game-date">23.09.2017, 19:00, СБ <span>ВВО</span></div>
+                                <div class="side-game-place">Владивосток, СК «Олимпиец»</div>
+                                <div class="side-game-ctrl">
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-5.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Интервью</div>
+                                    </a>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-6.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Превью</div>
+                                    </a>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-3.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Статистика</div>
+                                    </a>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-4.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Текстовый отчет</div>
+                                    </a>
                                 </div>
                             </div>
+                            <!-- side game END -->
 
-                            <a href="#" class="side-banner">
-                                <div class="main-news-big-photo"><img src="files/main-news-big-2.jpg" alt="" /></div>
-                                <div class="main-news-big-content">
-                                    <div class="main-news-big-content-text">Danceteam</div>
-                                    <div class="main-news-big-content-btn"><div class="btn btn-red"><span>узнать больше</span></div></div>
+                            <!-- side game -->
+                            <div class="side-game" data-href="#">
+                                <div class="side-game-logos">
+                                    <img src="files/side-game-logo-1.png" alt="" />
+                                    <img src="files/side-game-logo-2.png" alt="" />
                                 </div>
-                            </a>
-
-                            <a href="#" class="side-banner">
-                                <div class="main-news-big-photo"><img src="files/main-news-big-1.jpg" alt="" /></div>
-                                <div class="main-news-big-content">
-                                    <div class="main-news-big-content-text">Купить мячи</div>
-                                    <div class="main-news-big-content-btn"><div class="btn btn-red"><span>перейти в магазин</span></div></div>
+                                <div class="side-game-result">67 : 87</div>
+                                <div class="side-game-date">23.09.2017, 19:00, СБ <span>ВВО</span></div>
+                                <div class="side-game-place">Владивосток, СК «Олимпиец»</div>
+                                <div class="side-game-ctrl">
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-5.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Интервью</div>
+                                    </a>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-6.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Превью</div>
+                                    </a>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-3.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Статистика</div>
+                                    </a>
+                                    <a href="#" class="side-game-ctrl-item">
+                                        <div class="side-game-ctrl-item-icon"><img src="images/game-icon-4.png" alt="" /></div>
+                                        <div class="side-game-ctrl-item-title">Текстовый отчет</div>
+                                    </a>
                                 </div>
-                            </a>
-
-                            <div class="side-partner">
-                                <a href="#" target="_blank"><img src="files/main-partner-10.png" alt="" /></a>
                             </div>
-
+                            <!-- side game END -->
                         </div>
-                        <!-- content side END -->
+                        <!-- calendar cards END -->
 
                     </div>
                     <!-- container END -->

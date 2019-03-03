@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
 
         <meta name="viewport" content="width=device-width" />
     </head>
@@ -687,169 +688,412 @@
                         <h1>Плей-офф</h1>
 
                         <h2>Финал чемпионата</h2>
-                        <div class="tour-playoff-header">
-                            <h2></h2>
-                        </div>
 
                         <!-- tour playoff -->
                         <div class="tour-playoff">
 
-                        <div class="main-rating-table main-rating-table-playoff">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="main-rating-table-header-12"></th>
-                                        <th class="main-rating-table-header-13">Клуб</th>
-                                        <th class="main-rating-table-header-14">1-й матч</th>
-                                        <th class="main-rating-table-header-15">2-й матч</th>
-                                        <th class="main-rating-table-header-16">3-й матч</th>
-                                        <th class="main-rating-table-header-17">4-й матч</th>
-                                        <th class="main-rating-table-header-18">5-й матч</th>
-                                        <th class="main-rating-table-header-19">6-й матч</th>
-                                        <th class="main-rating-table-header-20">7-й матч</th>
-                                        <th class="main-rating-table-header-21">Счет в серии</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="main-rating-table-cell-12">1</td>
-                                        <td class="main-rating-table-cell-13">
-                                            <div class="main-rating-table-team">
-                                                <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-01.png" alt="" /></div>
-                                                <div class="main-rating-table-team-name">Металлург</div>
-                                            </div>
-                                        </td>
-                                        <td class="main-rating-table-cell-14">88 : 99<span class="main-rating-table-cell-date">8 ноя</span></td>
-                                        <td class="main-rating-table-cell-15"></td>
-                                        <td class="main-rating-table-cell-16">12 ноя</td>
-                                        <td class="main-rating-table-cell-17"></td>
-                                        <td class="main-rating-table-cell-18">18 ноя</td>
-                                        <td class="main-rating-table-cell-19"></td>
-                                        <td class="main-rating-table-cell-20"></td>
-                                        <td class="main-rating-table-cell-21" rowspan="2">
-                                            <div class="main-rating-table-score">0 - 0</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main-rating-table-cell-12">2</td>
-                                        <td class="main-rating-table-cell-13">
-                                            <div class="main-rating-table-team">
-                                                <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-02.png" alt="" /></div>
-                                                <div class="main-rating-table-team-name">СКА</div>
-                                            </div>
-                                        </td>
-                                        <td class="main-rating-table-cell-14"></td>
-                                        <td class="main-rating-table-cell-15">56 : 92 <span class="main-rating-table-cell-date">10 ноя</span></td>
-                                        <td class="main-rating-table-cell-16"></td>
-                                        <td class="main-rating-table-cell-17">14 ноя</td>
-                                        <td class="main-rating-table-cell-18"></td>
-                                        <td class="main-rating-table-cell-19">24 ноя</td>
-                                        <td class="main-rating-table-cell-20"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="main-rating-table main-rating-table-playoff">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="main-rating-table-header-12"></th>
+                                            <th class="main-rating-table-header-13">Клуб</th>
+                                            <th class="main-rating-table-header-14">1-й матч</th>
+                                            <th class="main-rating-table-header-15">2-й матч</th>
+                                            <th class="main-rating-table-header-16">3-й матч</th>
+                                            <th class="main-rating-table-header-17">4-й матч</th>
+                                            <th class="main-rating-table-header-18">5-й матч</th>
+                                            <th class="main-rating-table-header-19">6-й матч</th>
+                                            <th class="main-rating-table-header-20">7-й матч</th>
+                                            <th class="main-rating-table-header-21">Счет в серии</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">1</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-01.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Спартак СПб</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">88 : 99<span class="main-rating-table-cell-date">8 ноя</span></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16">12 ноя</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">18 ноя</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">0 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">2</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-03.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Буревестник</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15">56 : 92 <span class="main-rating-table-cell-date">10 ноя</span></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 ноя</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        <!-- tour playoff END -->
 
-                        <div class="main-rating-title">1/2 чемпионата</div>
-                        <div class="main-rating-table main-rating-table-playoff">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="main-rating-table-header-12"></th>
-                                        <th class="main-rating-table-header-13">Клуб</th>
-                                        <th class="main-rating-table-header-14">1-й матч</th>
-                                        <th class="main-rating-table-header-15">2-й матч</th>
-                                        <th class="main-rating-table-header-16">3-й матч</th>
-                                        <th class="main-rating-table-header-17">4-й матч</th>
-                                        <th class="main-rating-table-header-18">5-й матч</th>
-                                        <th class="main-rating-table-header-19">6-й матч</th>
-                                        <th class="main-rating-table-header-20">7-й матч</th>
-                                        <th class="main-rating-table-header-21">Счет в серии</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="main-rating-table-cell-12">1</td>
-                                        <td class="main-rating-table-cell-13">
-                                            <div class="main-rating-table-team">
-                                                <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-01.png" alt="" /></div>
-                                                <div class="main-rating-table-team-name">Металлург</div>
-                                            </div>
-                                        </td>
-                                        <td class="main-rating-table-cell-14">70 : 60<span class="main-rating-table-cell-date">9 окт</span></td>
-                                        <td class="main-rating-table-cell-15"></td>
-                                        <td class="main-rating-table-cell-16"></td>
-                                        <td class="main-rating-table-cell-17">14 окт</td>
-                                        <td class="main-rating-table-cell-18"></td>
-                                        <td class="main-rating-table-cell-19">24 окт</td>
-                                        <td class="main-rating-table-cell-20"></td>
-                                        <td class="main-rating-table-cell-21" rowspan="2">
-                                            <div class="main-rating-table-score">2 - 0</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main-rating-table-cell-12">2</td>
-                                        <td class="main-rating-table-cell-13">
-                                            <div class="main-rating-table-team">
-                                                <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-02.png" alt="" /></div>
-                                                <div class="main-rating-table-team-name">СКА</div>
-                                            </div>
-                                        </td>
-                                        <td class="main-rating-table-cell-14"></td>
-                                        <td class="main-rating-table-cell-15">79 : 84 <span class="main-rating-table-cell-date">10 окт</span></td>
-                                        <td class="main-rating-table-cell-16">12 окт</td>
-                                        <td class="main-rating-table-cell-17"></td>
-                                        <td class="main-rating-table-cell-18">18 окт</td>
-                                        <td class="main-rating-table-cell-19"></td>
-                                        <td class="main-rating-table-cell-20"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="main-rating-table-cell-12">3</td>
-                                        <td class="main-rating-table-cell-13">
-                                            <div class="main-rating-table-team">
-                                                <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-04.png" alt="" /></div>
-                                                <div class="main-rating-table-team-name">Самара</div>
-                                            </div>
-                                        </td>
-                                        <td class="main-rating-table-cell-14">55 : 44<span class="main-rating-table-cell-date">9 окт</span></td>
-                                        <td class="main-rating-table-cell-15">98 : 79 <span class="main-rating-table-cell-date">10 окт</span></td>
-                                        <td class="main-rating-table-cell-16"></td>
-                                        <td class="main-rating-table-cell-17">14 окт</td>
-                                        <td class="main-rating-table-cell-18"></td>
-                                        <td class="main-rating-table-cell-19">24 окт</td>
-                                        <td class="main-rating-table-cell-20"></td>
-                                        <td class="main-rating-table-cell-21" rowspan="2">
-                                            <div class="main-rating-table-score">1 - 0</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="main-rating-table-cell-12">4</td>
-                                        <td class="main-rating-table-cell-13">
-                                            <div class="main-rating-table-team">
-                                                <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-07.png" alt="" /></div>
-                                                <div class="main-rating-table-team-name">Урал</div>
-                                            </div>
-                                        </td>
-                                        <td class="main-rating-table-cell-14"></td>
-                                        <td class="main-rating-table-cell-15"></td>
-                                        <td class="main-rating-table-cell-16">12 окт</td>
-                                        <td class="main-rating-table-cell-17"></td>
-                                        <td class="main-rating-table-cell-18">18 окт</td>
-                                        <td class="main-rating-table-cell-19"></td>
-                                        <td class="main-rating-table-cell-20"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <h2>1/2 чемпионата</h2>
+
+                        <!-- tour playoff -->
+                        <div class="tour-playoff">
+
+                            <div class="main-rating-table main-rating-table-playoff">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="main-rating-table-header-12"></th>
+                                            <th class="main-rating-table-header-13">Клуб</th>
+                                            <th class="main-rating-table-header-14">1-й матч</th>
+                                            <th class="main-rating-table-header-15">2-й матч</th>
+                                            <th class="main-rating-table-header-16">3-й матч</th>
+                                            <th class="main-rating-table-header-17">4-й матч</th>
+                                            <th class="main-rating-table-header-18">5-й матч</th>
+                                            <th class="main-rating-table-header-19">6-й матч</th>
+                                            <th class="main-rating-table-header-20">7-й матч</th>
+                                            <th class="main-rating-table-header-21">Счет в серии</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">1</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-01.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Спартак СПб</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">70 : 60<span class="main-rating-table-cell-date">9 окт</span></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 окт</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19">24 окт</td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">2 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">2</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-02.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Самара</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15">79 : 84 <span class="main-rating-table-cell-date">10 окт</span></td>
+                                            <td class="main-rating-table-cell-16">12 окт</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">18 окт</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">3</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-06.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Иркут</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">55 : 44<span class="main-rating-table-cell-date">9 окт</span></td>
+                                            <td class="main-rating-table-cell-15">98 : 79 <span class="main-rating-table-cell-date">10 окт</span></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 окт</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19">24 окт</td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">1 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">4</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-03.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Буревестник</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16">12 окт</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">18 окт</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        <!-- tour playoff END -->
+
+                        <h2>1/4 чемпионата</h2>
+
+                        <!-- tour playoff -->
+                        <div class="tour-playoff">
+
+                            <div class="main-rating-table main-rating-table-playoff">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="main-rating-table-header-12"></th>
+                                            <th class="main-rating-table-header-13">Клуб</th>
+                                            <th class="main-rating-table-header-14">1-й матч</th>
+                                            <th class="main-rating-table-header-15">2-й матч</th>
+                                            <th class="main-rating-table-header-16">3-й матч</th>
+                                            <th class="main-rating-table-header-17">4-й матч</th>
+                                            <th class="main-rating-table-header-18">5-й матч</th>
+                                            <th class="main-rating-table-header-19">6-й матч</th>
+                                            <th class="main-rating-table-header-20">7-й матч</th>
+                                            <th class="main-rating-table-header-21">Счет в серии</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">1</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-01.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Уралмаш</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">70 : 60<span class="main-rating-table-cell-date">9 окт</span></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 окт</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19">24 окт</td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">2 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">2</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-02.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Новосибирск</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15">79 : 84 <span class="main-rating-table-cell-date">10 окт</span></td>
+                                            <td class="main-rating-table-cell-16">12 окт</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">18 окт</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">3</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-07.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">ЦСКА-2</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">55 : 44<span class="main-rating-table-cell-date">9 окт</span></td>
+                                            <td class="main-rating-table-cell-15">98 : 79 <span class="main-rating-table-cell-date">10 окт</span></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 окт</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19">24 окт</td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">1 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">4</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-03.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">МБА</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16">5 окт</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">10 окт</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">5</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-01.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Спартак СПб</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">70 : 60<span class="main-rating-table-cell-date">9 окт</span></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 окт</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19">24 окт</td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">2 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">6</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-02.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Самара</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15">79 : 84 <span class="main-rating-table-cell-date">10 окт</span></td>
+                                            <td class="main-rating-table-cell-16">12 окт</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">18 окт</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">7</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-06.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Иркут</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14">55 : 44<span class="main-rating-table-cell-date">9 окт</span></td>
+                                            <td class="main-rating-table-cell-15">98 : 79 <span class="main-rating-table-cell-date">10 окт</span></td>
+                                            <td class="main-rating-table-cell-16"></td>
+                                            <td class="main-rating-table-cell-17">14 окт</td>
+                                            <td class="main-rating-table-cell-18"></td>
+                                            <td class="main-rating-table-cell-19">24 окт</td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                            <td class="main-rating-table-cell-21" rowspan="2">
+                                                <div class="main-rating-table-score">1 - 0</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="main-rating-table-cell-12">8</td>
+                                            <td class="main-rating-table-cell-13">
+                                                <div class="main-rating-table-team">
+                                                    <div class="main-rating-table-team-logo"><img src="files/main-rating-logo-03.png" alt="" /></div>
+                                                    <div class="main-rating-table-team-name">Буревестник</div>
+                                                </div>
+                                            </td>
+                                            <td class="main-rating-table-cell-14"></td>
+                                            <td class="main-rating-table-cell-15"></td>
+                                            <td class="main-rating-table-cell-16">12 окт</td>
+                                            <td class="main-rating-table-cell-17"></td>
+                                            <td class="main-rating-table-cell-18">18 окт</td>
+                                            <td class="main-rating-table-cell-19"></td>
+                                            <td class="main-rating-table-cell-20"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- tour playoff END -->
 
                     </div>
                     <!-- container END -->
                 </div>
                 <!-- content END -->
+
+                <!-- main results -->
+                <div class="main-results main-results-tour">
+                    <div class="container">
+                        <div class="main-results-title">Последние результаты:</div>
+                        <div class="main-results-list">
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Суперлига — Первый дивизион</div>
+                                    <div class="main-results-item-title">Химки-Подмосковье — Зенит-Фарм <span>79 : 70 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Кубок России — 1/2 чемпионата</div>
+                                    <div class="main-results-item-title">Самара — Купол-Родники <span>105 : 68 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Кубок России — финал</div>
+                                    <div class="main-results-item-title">ЦСКА-2 — МБА <span>89 : 88 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Суперлига — Первый дивизион</div>
+                                    <div class="main-results-item-title">Новосибирск — Спартак-Приморье <span>87 : 67 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Суперлига — Первый дивизион</div>
+                                    <div class="main-results-item-title">Химки-Подмосковье — Зенит-Фарм <span>79 : 70 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Кубок России — 1/2 чемпионата</div>
+                                    <div class="main-results-item-title">Самара — Купол-Родники <span>105 : 68 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Кубок России — финал</div>
+                                    <div class="main-results-item-title">ЦСКА-2 — МБА <span>89 : 88 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                            <div class="main-results-item">
+                                <a href="#" class="main-results-item-inner">
+                                    <div class="main-results-item-date">21.11.2018 | Суперлига — Первый дивизион</div>
+                                    <div class="main-results-item-title">Новосибирск — Спартак-Приморье <span>87 : 67 <em>(19:22, 18:18, 25:23, 19:20) Москва, СК «ЦСКА»</em></span></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main results END -->
 
             </div>
         </div>
@@ -988,6 +1232,7 @@
         <script src="js/validation/jquery.validate.min.js"></script>
         <script src="js/validation/messages_ru.js"></script>
         <script src="js/slick/slick.min.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/tools.js"></script>
         <script src="https://www.google.com/recaptcha/api.js"></script>
 

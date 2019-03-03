@@ -325,6 +325,56 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.main-rating-table-playoff').mCustomScrollbar({
+        axis: 'x',
+        scrollButtons: {
+            enable: true
+        }
+    });
+
+    $('.tour-item').click(function() {
+        $(this).toggleClass('open');
+    });
+
+    $('.calendar-filter-select-current').click(function() {
+        var curSelect = $(this).parents().filter('.calendar-filter-select');
+        if (curSelect.hasClass('open')) {
+            curSelect.removeClass('open');
+        } else {
+            $('.calendar-filter-select.open').removeClass('open');
+            curSelect.addClass('open');
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.calendar-filter-select').length == 0) {
+            $('.calendar-filter-select.open').removeClass('open');
+        }
+    });
+
+    $('.calendar-filter-select ul li input').change(function() {
+        var curLi = $(this).parents().filter('li');
+        var curSelect = $(this).parents().filter('.calendar-filter-select');
+        var curActive = curSelect.find('ul li input:checked').parent();
+        curSelect.find('.calendar-filter-select-current span').html(curActive.find('span').html());
+    });
+
+    $('.calendar-filter-select ul li label').click(function() {
+        var curSelect = $(this).parents().filter('.calendar-filter-select');
+        curSelect.removeClass('open');
+    });
+
+    $('.calendar-filter-btns button[type="reset"]').click(function() {
+        window.setTimeout(function() {
+            $('.calendar-filter-select ul li input:checked').each(function() {
+                var curLi = $(this).parents().filter('li');
+                var curSelect = $(this).parents().filter('.calendar-filter-select');
+                var curActive = curSelect.find('ul li input:checked').parent();
+                curSelect.find('.calendar-filter-select-current span').html(curActive.find('span').html());
+            });
+        });
+    });
+
 });
 
 function initForm(curForm) {
