@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>БК «Спартак-Приморье»</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic" />
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+
+                    <div class="top">
+                        <div class="container">
+                            <div class="top-text">19 октября 2018 | 19:00 вво | СК «Олимпиец» <span class="top-sep">|</span> <span class="top-season">Сезон 2018/19 |</span> Суперлига — Первый дивизион <span class="top-logos"><img src="files/top-logo-1.png" alt="" /> <img src="files/top-logo-2.png" alt="" /></span> <a href="#" class="btn"><span>Подробнее</span></a></div>
+                            <a href="#" class="top-close"></a>
+                        </div>
+                    </div>
+
+                    <!-- container -->
+                    <div class="container">
+
+                        <!-- header content -->
+                        <div class="header-content">
+                            <div class="logo"><a href="#"></a></div>
+
+                            <a href="#" class="mobile-menu-link"><span class="mobile-menu-link-inner"></span></a>
+
+                            <div class="header-btns">
+                                <a href="#auth" class="btn window-link-self"><span>Вход</span></a>
+                                <a href="#reg" class="btn window-link-self"><span>Регистрация</span></a>
+                            </div>
+
+                            <div id="auth" style="display:none">
+                                <div class="window-login">
+                                    <div class="window-title">
+                                        <ul>
+                                            <li><span>Вход</span></li>
+                                            <li><a href="#reg" class="window-link-self">Регистрация</a></li>
+                                        </ul>
+                                    </div>
+                                    <form action="#" method="post" autocomplete="off">
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Логин</div>
+                                                <div class="form-input"><input type="text" name="login" value="" class="required" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Пароль</div>
+                                                <div class="form-input"><input type="password" name="password" value="" class="required" autocomplete="off" /></div>
+                                                <div class="window-login-forgot-link"><a href="#">Забыли пароль?</a></div>
+                                            </div>
+                                            <div class="window-login-submit">
+                                                <button type="submit" class="btn btn-red"><span>Войти</span></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div id="reg" style="display:none">
+                                <div class="window-login">
+                                    <div class="window-title">
+                                        <ul>
+                                            <li><a href="#auth" class="window-link-self">Вход</a></li>
+                                            <li><span>Регистрация</span></li>
+                                        </ul>
+                                    </div>
+                                    <form action="#" method="post" autocomplete="off">
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Фамилия <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="lastname" value="" class="required" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Имя <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="firstname" value="" class="required" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Отчество</div>
+                                                <div class="form-input"><input type="text" name="middlename" value="" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Электронная почта <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="email" value="" class="required email" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-field form-field-wide">
+                                                <div class="form-label">Номер телефона в федеральном формате <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="phone" value="" class="required phoneRU" autocomplete="off" /></div>
+                                                <div class="form-hint">Пример: +79089925070 (без пробелов и тире)</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-checkbox"><label><input type="checkbox" name="subscribe" checked="checked" /><span>Я хочу получать анонсы событий и новости на электронную почту</span></label></div>
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Город</div>
+                                                <div class="form-input"><input type="text" name="city" value="Владивосток" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Болельщик команды</div>
+                                                <div class="form-input"><input type="text" name="team" value="Спартак-Приморье" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Логин <span>*</span></div>
+                                                <div class="form-input"><input type="text" name="login" value="" class="required" autocomplete="off" /></div>
+                                                <div class="form-hint">Логин будет отображаться в комментариях</div>
+                                            </div>
+                                            <div class="form-field">
+                                                <div class="form-label">Пароль <span>*</span></div>
+                                                <div class="form-input"><input type="password" name="password" value="" class="required" id="password" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-field">
+                                                <div class="form-label">Повторите пароль <span>*</span></div>
+                                                <div class="form-input"><input type="password" name="repassword" value="" equalTo="#password" autocomplete="off" /></div>
+                                                <div class="form-captcha">
+                                                    <div class="form-captcha-label">Защита от автоматических регистраций</div>
+                                                    <div class="form-captcha-input">
+                                                        <div class="g-recaptcha"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="window-registration-submit">
+                                                    <button type="submit" class="btn btn-red"><span>зарегистрироваться</span></button>
+                                                </div>
+                                                <div class="form-required"><span>*</span> — поля, обязательны к заполнению</div>
+                                            </div>
+                                            <div class="registration-info">
+                                                <h2>Уважаемые болельщики!</h2>
+                                                <p>Регистрация на сайте БК "Спартак-Приморье" позволяет получить доступ к турниру прогнозов, зарегистрированные пользователи так же могут оставлять свои сообщения в&nbsp;гостевой книге и комментировать новости. Список интерактивных сервисов, доступных зарегистрированным пользователям, будет со временем расширяться.</p>
+                                                <p>Администрация сайта гарантирует, что указанные Вами данные не будут разглашены или переданы третьим лицам (кроме случаев, предусмотренных действующим законодательством Российской Федерации).</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="header-search">
+                                <form action="#" method="post">
+                                    <div class="header-search-input"><input type="text" name="search" value="" placeholder="Поиск по сайту..." class="required" /></div>
+                                    <div class="header-search-submit"><button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px"><path d="M16.735,15.483 L12.545,11.275 C13.622,10.039 14.212,8.482 14.212,6.863 C14.212,3.078 11.024,-0.001 7.105,-0.001 C3.187,-0.001 -0.002,3.078 -0.002,6.863 C-0.002,10.647 3.187,13.726 7.105,13.726 C8.577,13.726 9.978,13.298 11.177,12.484 L15.398,16.724 C15.575,16.901 15.812,16.999 16.066,16.999 C16.307,16.999 16.535,16.910 16.709,16.749 C17.077,16.406 17.089,15.839 16.735,15.483 ZM7.105,1.790 C10.002,1.790 12.358,4.065 12.358,6.863 C12.358,9.660 10.002,11.936 7.105,11.936 C4.209,11.936 1.852,9.660 1.852,6.863 C1.852,4.065 4.209,1.790 7.105,1.790 Z"/></svg></button></div>
+                                </form>
+                            </div>
+
+                            <div class="header-social">
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-01.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-02.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-03.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-04.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-05.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-06.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-07.png" alt="" /></span></a>
+                                <a href="#" class="btn" target="_blank"><span><img src="images/social-08.png" alt="" /></span></a>
+                            </div>
+                        </div>
+                        <!-- header content END -->
+
+                        <!-- header menu -->
+                        <div class="header-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Новости</a>
+                                    <ul>
+                                        <li><a href="#">Все новости</a></li>
+                                        <li><a href="#">Обзор прессы</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Клуб</a>
+                                    <ul>
+                                        <li><a href="#">Администрация</a></li>
+                                        <li><a href="#">История</a></li>
+                                        <li><a href="#">Партнеры</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Команда</a></li>
+                                <li class="active">
+                                    <a href="#">Суперлига</a>
+                                    <ul>
+                                        <li class="active"><a href="#">Турнирное положение</a></li>
+                                        <li><a href="#">Календарь | Результаты</a></li>
+                                        <li><a href="#">Сводная статистика</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Кубок России</a></li>
+                                <li><a href="#">Кубок Сибири и ДВ</a></li>
+                                <li>
+                                    <a href="#">Молодежные</a>
+                                    <ul>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Команда ДЮБЛ</a></li>
+                                        <li><a href="#">Лига «Спартак-Приморье»</a></li>
+                                        <li><a href="#">Школа подготовки</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Арена</a></li>
+                                <li><a href="#">Трансляция</a></li>
+                                <li><a href="#">Danceteam</a></li>
+                                <li><a href="#">Блоги</a></li>
+                                <li>
+                                    <a href="#">Мультимедиа</a>
+                                    <ul>
+                                        <li><a href="#">Фото</a></li>
+                                        <li><a href="#">Видео</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Гостевая</a></li>
+                            </ul>
+                        </div>
+                        <!-- header menu END -->
+
+                        <!-- mobile menu -->
+                        <div class="mobile-menu">
+                            <div class="mobile-menu-left">
+                                <div class="mobile-menu-col">
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Новости</a></div>
+                                        <div class="mobile-menu-group-list">
+                                            <ul>
+                                                <li><a href="#">Все новости</a></li>
+                                                <li><a href="#">Обзор прессы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile-menu-col">
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Клуб</a></div>
+                                        <div class="mobile-menu-group-list">
+                                            <ul>
+                                                <li><a href="#">Администрация</a></li>
+                                                <li><a href="#">История</a></li>
+                                                <li><a href="#">Партнеры</a></li>
+                                                <li><a href="#">Контакты</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Команда</a></div>
+                                    </div>
+                                </div>
+                                <div class="mobile-menu-col">
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Суперлига</a></div>
+                                        <div class="mobile-menu-group-list">
+                                            <ul>
+                                                <li><a href="#">Турнирное положение</a></li>
+                                                <li><a href="#">Календарь | Результаты</a></li>
+                                                <li><a href="#">Сводная статистика</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Кубок России</a></div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Кубок Сибири и ДВ</a></div>
+                                    </div>
+                                </div>
+                                <div class="mobile-menu-col">
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Молодежные</a></div>
+                                        <div class="mobile-menu-group-list">
+                                            <ul>
+                                                <li><a href="#">Новости</a></li>
+                                                <li><a href="#">Команда ДЮБЛ</a></li>
+                                                <li><a href="#">Лига «Спартак-Приморье»</a></li>
+                                                <li><a href="#">Школа подготовки</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-right">
+                                <div class="mobile-menu-col">
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Мультимедиа</a></div>
+                                        <div class="mobile-menu-group-list">
+                                            <ul>
+                                                <li><a href="#">Фото</a></li>
+                                                <li><a href="#">Видео</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Арена</a></div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Трансляция</a></div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Danceteam</a></div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Блоги</a></div>
+                                    </div>
+                                    <div class="mobile-menu-group">
+                                        <div class="mobile-menu-group-title"><a href="#">Гостевая</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mobile menu END -->
+
+                    </div>
+                    <!-- container END -->
+
+                </header>
+
+                <!-- content -->
+                <div class="content">
+                    <!-- container -->
+                    <div class="container">
+                        <div class="breadcrumbs"><a href="#">Главная</a> » <a href="#">Суперлига</a> » <a href="#">Календарь | Результаты</a> » Спартак-приморье — УФИМЕЦ</div>
+
+                        <h1>Спартак-Приморье</h1>
+
+                        <!-- game team list -->
+                        <div class="game-team-list">
+                            <div class="game-team-list-inner">
+                                <div class="game-team-headers">
+                                    <div class="game-team-header-number">№</div>
+                                    <div class="game-team-header-name">Игрок</div>
+                                    <div class="game-team-header-info">оч</div>
+                                    <div class="game-team-header-info">3-х</div>
+                                    <div class="game-team-header-info">2-х</div>
+                                    <div class="game-team-header-info">1-х</div>
+                                    <div class="game-team-header-info">пч</div>
+                                    <div class="game-team-header-info">пс</div>
+                                    <div class="game-team-header-info">пд</div>
+                                    <div class="game-team-header-info">гп</div>
+                                    <div class="game-team-header-info">пх</div>
+                                    <div class="game-team-header-info">пт</div>
+                                    <div class="game-team-header-info">бш</div>
+                                    <div class="game-team-header-info">ф</div>
+                                    <div class="game-team-header-info">фс</div>
+                                    <div class="game-team-header-info">м</div>
+                                </div>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">24</div></div>
+                                    <div class="game-team-item-name"><strong>В. МАРТЫНОВ</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">11</div></div>
+                                    <div class="game-team-item-name"><strong>О. КАЛХОУН</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">2</div></div>
+                                    <div class="game-team-item-name"><strong>А. ВЗДЫХАЛКИН</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">13</div></div>
+                                    <div class="game-team-item-name">Г. МОТОВИЛОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">6</div></div>
+                                    <div class="game-team-item-name">М. КОЛЮШКИН</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">17</div></div>
+                                    <div class="game-team-item-name">А. РАЗУМОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">2</div></div>
+                                    <div class="game-team-item-name"><strong>В. БАБАЙЛОВ</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">16</div></div>
+                                    <div class="game-team-item-name"><strong>М. КРИВОШЕЕВ</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">11</div></div>
+                                    <div class="game-team-item-name">Н. БОГДАНОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">20</div></div>
+                                    <div class="game-team-item-name">Г. ДЕНИСОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">12</div></div>
+                                    <div class="game-team-item-name">А. ЧИЛИКИН</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <a href="#" class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">1</div></div>
+                                    <div class="game-team-item-name">А. САЯПИН</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </a>
+                                <div class="game-team-item game-team-item-all">
+                                    <div class="game-team-item-number"></div>
+                                    <div class="game-team-item-name" colspan="2">Команда <div class="game-team-item-coach">Тренер: М. УЧАЙКИН</div></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- game team list END -->
+
+                        <h1>Уфимец</h1>
+
+                        <!-- game team list -->
+                        <div class="game-team-list">
+                            <div class="game-team-list-inner">
+                                <div class="game-team-headers">
+                                    <div class="game-team-header-number">№</div>
+                                    <div class="game-team-header-name">Игрок</div>
+                                    <div class="game-team-header-info">оч</div>
+                                    <div class="game-team-header-info">3-х</div>
+                                    <div class="game-team-header-info">2-х</div>
+                                    <div class="game-team-header-info">1-х</div>
+                                    <div class="game-team-header-info">пч</div>
+                                    <div class="game-team-header-info">пс</div>
+                                    <div class="game-team-header-info">пд</div>
+                                    <div class="game-team-header-info">гп</div>
+                                    <div class="game-team-header-info">пх</div>
+                                    <div class="game-team-header-info">пт</div>
+                                    <div class="game-team-header-info">бш</div>
+                                    <div class="game-team-header-info">ф</div>
+                                    <div class="game-team-header-info">фс</div>
+                                    <div class="game-team-header-info">м</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">24</div></div>
+                                    <div class="game-team-item-name"><strong>В. МАРТЫНОВ</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">11</div></div>
+                                    <div class="game-team-item-name"><strong>О. КАЛХОУН</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">2</div></div>
+                                    <div class="game-team-item-name"><strong>А. ВЗДЫХАЛКИН</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">13</div></div>
+                                    <div class="game-team-item-name">Г. МОТОВИЛОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">6</div></div>
+                                    <div class="game-team-item-name">М. КОЛЮШКИН</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">17</div></div>
+                                    <div class="game-team-item-name">А. РАЗУМОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">2</div></div>
+                                    <div class="game-team-item-name"><strong>В. БАБАЙЛОВ</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">16</div></div>
+                                    <div class="game-team-item-name"><strong>М. КРИВОШЕЕВ</strong></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">11</div></div>
+                                    <div class="game-team-item-name">Н. БОГДАНОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">20</div></div>
+                                    <div class="game-team-item-name">Г. ДЕНИСОВ</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">12</div></div>
+                                    <div class="game-team-item-name">А. ЧИЛИКИН</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item">
+                                    <div class="game-team-item-number"><div class="game-team-item-number-inner">1</div></div>
+                                    <div class="game-team-item-name">А. САЯПИН</div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                                <div class="game-team-item game-team-item-all">
+                                    <div class="game-team-item-number"></div>
+                                    <div class="game-team-item-name" colspan="2">Команда <div class="game-team-item-coach">Тренер: А. ЛОБАНОВ</div></div>
+                                    <div class="game-team-item-info">788</div>
+                                    <div class="game-team-item-info">64/218</div>
+                                    <div class="game-team-item-info">227/477</div>
+                                    <div class="game-team-item-info">142/191</div>
+                                    <div class="game-team-item-info">38</div>
+                                    <div class="game-team-item-info">224</div>
+                                    <div class="game-team-item-info">262</div>
+                                    <div class="game-team-item-info">168</div>
+                                    <div class="game-team-item-info">81</div>
+                                    <div class="game-team-item-info">140</div>
+                                    <div class="game-team-item-info">17</div>
+                                    <div class="game-team-item-info">102</div>
+                                    <div class="game-team-item-info">181</div>
+                                    <div class="game-team-item-info">1734:15</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- game team list END -->
+
+                        <!-- content wrap -->
+                        <div class="content-wrap">
+
+                            <!-- legend -->
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">И</div>
+                                        <div class="legend-item-text">Сыграно игр</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">М</div>
+                                        <div class="legend-item-text">Время на площадке</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">2-Х</div>
+                                        <div class="legend-item-text">2-х очковые (попадания/броски)</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">3-Х</div>
+                                        <div class="legend-item-text">3-х очковые (попадания/броски)</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">1-Х</div>
+                                        <div class="legend-item-text">Штрафные (попадания/броски)</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ПЧ</div>
+                                        <div class="legend-item-text">Подборы на чужом щите</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ПС</div>
+                                        <div class="legend-item-text">Подборы на своём щите</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ПД</div>
+                                        <div class="legend-item-text">Всего подборов</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ГП</div>
+                                        <div class="legend-item-text">Голевые передачи</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ПХ</div>
+                                        <div class="legend-item-text">Перехваты мяча</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ПТ</div>
+                                        <div class="legend-item-text">Потери мяча</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">БШ</div>
+                                        <div class="legend-item-text">Блок-шоты</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">Ф</div>
+                                        <div class="legend-item-text">Персональные фолы</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ФС</div>
+                                        <div class="legend-item-text">Фолы соперника на игроке</div>
+                                    </div>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-item-inner">
+                                        <div class="legend-item-name">ОЧ</div>
+                                        <div class="legend-item-text">Очки</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- legend END -->
+
+                            <h2>Судейство</h2>
+
+                            <!-- staff list -->
+                            <div class="staff-list">
+                                <div class="staff-headers">
+                                    <div class="staff-header-post">Должность</div>
+                                    <div class="staff-header-name">ФИО</div>
+                                </div>
+                                <div class="staff-item">
+                                    <div class="staff-item-post">Старший судья</div>
+                                    <div class="staff-item-name">Милош Павичевич</div>
+                                </div>
+                                <div class="staff-item">
+                                    <div class="staff-item-post">Судья</div>
+                                    <div class="staff-item-name">Учайкин Максим Андреевич</div>
+                                </div>
+                                <div class="staff-item">
+                                    <div class="staff-item-post">Судья</div>
+                                    <div class="staff-item-name">Владимиров Василий Владимирович</div>
+                                </div>
+                                <div class="staff-item">
+                                    <div class="staff-item-post">Комиссар</div>
+                                    <div class="staff-item-name">Смирнов Сергей Евгеньевич</div>
+                                </div>
+                            </div>
+                            <!-- staff list END -->
+
+                        </div>
+                        <!-- content wrap END -->
+
+                        <!-- content side -->
+                        <div class="content-side">
+
+                            <!-- news other -->
+                            <div class="news-other">
+                                <h2>Последние новости</h2>
+                                <div class="news-list">
+                                    <div class="news-item">
+                                        <a href="#">
+                                            <div class="news-item-date">12 мая 2018 | Новости <span>12</span></div>
+                                            <div class="news-item-title">Какой чемпион чемпионистей</div>
+                                        </a>
+                                    </div>
+                                    <div class="news-item">
+                                        <a href="#">
+                                            <div class="news-item-date">12 мая 2018 | Новости <span>1</span></div>
+                                            <div class="news-item-title">«Спартак-Приморье» подписал контракт с американским форвардом ДиАндре Дэниэлсом</div>
+                                        </a>
+                                    </div>
+                                    <div class="news-item">
+                                        <a href="#">
+                                            <div class="news-item-date">12 мая 2018 | Новости <span>3</span></div>
+                                            <div class="news-item-title">«-1» перед ответным матчем во Владивостоке</div>
+                                        </a>
+                                    </div>
+                                    <div class="news-item">
+                                        <a href="#">
+                                            <div class="news-item-date">12 мая 2018 | Новости <span>0</span></div>
+                                            <div class="news-item-title">Юноши «Спартака-Приморье» - лучшие на Дальнем Востоке</div>
+                                        </a>
+                                    </div>
+                                    <div class="news-item">
+                                        <a href="#">
+                                            <div class="news-item-date">12 мая 2018 | Новости <span>0</span></div>
+                                            <div class="news-item-title">Максим Колюшкин: Попадание в число 12 игроков сборной - это хороший опыт</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- news other END -->
+
+                        </div>
+                        <!-- content side END -->
+
+                    </div>
+                    <!-- container END -->
+                </div>
+                <!-- content END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+
+                    <div class="footer-btns">
+                        <a href="#auth" class="btn window-link-self"><span>Вход</span></a>
+                        <a href="#reg" class="btn window-link-self"><span>Регистрация</span></a>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-01.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-02.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-03.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-04.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-05.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-06.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-07.png" alt="" /></span></a>
+                        <a href="#" class="btn" target="_blank"><span><img src="images/social-08.png" alt="" /></span></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- container -->
+            <div class="container">
+
+                <!-- footer menu -->
+                <div class="footer-menu">
+                    <div class="footer-menu-left">
+                        <div class="footer-menu-col">
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Новости</a></div>
+                                <div class="footer-menu-group-list">
+                                    <ul>
+                                        <li><a href="#">Все новости</a></li>
+                                        <li><a href="#">Обзор прессы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-menu-col">
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Клуб</a></div>
+                                <div class="footer-menu-group-list">
+                                    <ul>
+                                        <li><a href="#">Администрация</a></li>
+                                        <li><a href="#">История</a></li>
+                                        <li><a href="#">Партнеры</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Команда</a></div>
+                            </div>
+                        </div>
+                        <div class="footer-menu-col">
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Суперлига</a></div>
+                                <div class="footer-menu-group-list">
+                                    <ul>
+                                        <li><a href="#">Турнирное положение</a></li>
+                                        <li><a href="#">Календарь | Результаты</a></li>
+                                        <li><a href="#">Сводная статистика</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Кубок России</a></div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Кубок Сибири и ДВ</a></div>
+                            </div>
+                        </div>
+                        <div class="footer-menu-col">
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Молодежные</a></div>
+                                <div class="footer-menu-group-list">
+                                    <ul>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Команда ДЮБЛ</a></li>
+                                        <li><a href="#">Лига «Спартак-Приморье»</a></li>
+                                        <li><a href="#">Школа подготовки</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-menu-right">
+                        <div class="footer-menu-col">
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Мультимедиа</a></div>
+                                <div class="footer-menu-group-list">
+                                    <ul>
+                                        <li><a href="#">Фото</a></li>
+                                        <li><a href="#">Видео</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Арена</a></div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Трансляция</a></div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Danceteam</a></div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Блоги</a></div>
+                            </div>
+                            <div class="footer-menu-group">
+                                <div class="footer-menu-group-title"><a href="#">Гостевая</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer menu END -->
+
+                <div class="footer-bottom">
+                    <div class="footer-copyrights">© 2002-2018 Официальный сайт БК «Спартак-Приморье» Приморский край  При использовании текстовых и графических материалов ссылка на сайт обязательна</div>
+                    <div class="footer-developer">Разработка сайта — студия <a href="http://netsmart.ru" target="_blank"><strong>«Нэтсмарт»</strong></a></div>
+                </div>
+
+            </div>
+            <!-- container END -->
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/mask/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/tools.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    </body>
+</html>

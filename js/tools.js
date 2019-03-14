@@ -375,6 +375,32 @@ $(document).ready(function() {
         });
     });
 
+    $('body').on('click', '.calendar-item[data-href]', function() {
+        window.location = $(this).attr('data-href');
+    });
+
+    $('body').on('mouseover', '.calendar-item[data-href] a, .calendar-item-arrow', function() {
+        $('body').off('click', '.calendar-item[data-href]');
+    });
+
+    $('body').on('mouseout', '.calendar-item[data-href] a, .calendar-item-arrow', function() {
+        $('body').on('click', '.calendar-item[data-href]', function() {
+            window.location = $(this).attr('data-href');
+        });
+    });
+
+    $('.calendar-item-arrow').click(function(e) {
+        $(this).parent().toggleClass('open');
+        e.preventDefault();
+    });
+
+    $('.game-team-list').mCustomScrollbar({
+        axis: 'x',
+        scrollButtons: {
+            enable: true
+        }
+    });
+
 });
 
 function initForm(curForm) {

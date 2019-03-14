@@ -1491,6 +1491,7 @@ header {background:#100d13; position:relative; z-index:20}
 .content-side .news-other {padding:29px 35px 40px 35px; margin:40px 0}
 .content-side .news-other:first-child {margin-top:0; background:#f3f3f3 url(../images/side-rating-table.png) repeat-x}
 .dance-list+.content-wrap+.content-side .news-other:first-child {background:#f3f3f3}
+.game-team-list+.content-wrap+.content-side .news-other:first-child {background:#f3f3f3}
 .content-side .news-other h2 {margin-top:0}
 .news-other .news-list {margin:-28px 0 0 0}
 .news-other .news-item {display:block; padding:0; width:auto}
@@ -2310,16 +2311,20 @@ header {background:#100d13; position:relative; z-index:20}
 
 .legend {font-weight:bold; margin:21px -25px 33px -25px; font-size:0; line-height:0; letter-spacing:-1px}
 .legend-item {display:inline-block; vertical-align:top; width:450px; padding:0 25px}
+.content-wrap .legend-item {width:280px; padding:0 10px 0 25px}
 .legend-item-inner {border-top:2px solid #ececec; font-size:13px; line-height:21px; letter-spacing:0; padding:11px 0}
 .legend-item:nth-child(1) .legend-item-inner {border-top:none}
 .legend-item:nth-child(2) .legend-item-inner {border-top:none}
+.content-wrap .legend-item:nth-child(3) .legend-item-inner {border-top:none}
 .legend-item-inner::after {content:""; display:block; clear:both}
 .legend-item-name {float:left; font-size:12px; letter-spacing:0.48px; text-transform:uppercase; color:#908c95; padding:1px 0 0 0}
 .legend-item-text {margin:0 0 0 32px; color:#000}
 
 @media screen and (max-width:1199px) {
     .legend-item {display:block; width:auto}
+    .content-wrap .legend-item {width:auto; padding:0 25px}
     .legend-item:nth-child(2) .legend-item-inner {border-top:2px solid #ececec}
+    .content-wrap .legend-item:nth-child(3) .legend-item-inner {border-top:2px solid #ececec}
 }
 
 @media screen and (max-width:767px) {
@@ -2355,6 +2360,209 @@ header {background:#100d13; position:relative; z-index:20}
 .calendar-filter-btns {float:left; padding:14px 0 0 50px}
 .calendar-filter-btns .btn {display:block; margin:15px 0 0 0; width:203px; height:39px; line-height:39px}
 .calendar-filter-btns .btn em {font:17px/39px Arial, Helvertica, sans-serif}
+
+@media screen and (max-width:1199px) {
+    .calendar-filter {padding:4px 0 40px 0}
+    .calendar-filter-sep {display:none}
+    .calendar-filter-block {float:none; width:auto; padding:17px 0 0 52px}
+    .calendar-filter-block::after {content:""; display:block; clear:both}
+    .calendar-filter-select {clear:none; margin:0 42px 0 -20px}
+    .calendar-filter-select-current strong {float:none; display:block}
+    .calendar-filter-select-current span {float:none; display:block; margin:5px 0 0 0}
+    .calendar-filter-select-current::after {top:58px}
+    .calendar-filter-btns {float:none; padding:37px 52px 0 52px}
+    .calendar-filter-btns::after {content:""; display:block; clear:both}
+    .calendar-filter-btns .btn {float:left; margin:0; width:calc(50% - 10px)}
+    .calendar-filter-btns .btn+.btn {float:right}
+}
+
+@media screen and (max-width:767px) {
+    .calendar-filter {padding:0; border:none; margin:0}
+    .calendar-filter-block {float:none; width:auto; padding:0}
+    .calendar-filter-select {margin:0 18px 0 -20px}
+    .calendar-filter-select-without-title .calendar-filter-select-current strong {display:none}
+    .calendar-filter-select-without-title .calendar-filter-select-current::after {top:31px}
+    .calendar-filter-btns {padding:20px 0 0 0}
+    .calendar-filter-btns .btn {float:none; margin:10px 0 0 0; width:100%}
+    .calendar-filter-btns .btn+.btn {float:none}
+}
+
+.calendar-header {margin:15px 0 21px 0}
+.calendar-header::after {content:""; display:block; clear:both}
+.calendar-header h1 {float:left; margin:0}
+.calendar-header h2 {float:left; margin:0}
+.calendar-header-view {float:right; padding:16px 0 0 0}
+.calendar-header h2+.calendar-header-view {padding:0}
+.calendar-header-view-title {float:left; font-size:12px; font-weight:bold; line-height:26px; color:#000; letter-spacing:0.48px; text-transform:uppercase}
+.calendar-header-view-list {float:left; width:34px; height:26px; background:url(../images/calendar-view.png); margin:1px 0 0 20px}
+.calendar-header-view-list.active {background-position:left -26px}
+.calendar-header-view-cards {float:left; width:34px; height:26px; background:url(../images/calendar-view.png) -34px top; margin:0 0 0 20px}
+.calendar-header-view-cards.active {background-position:-34px -26px}
+
+@media screen and (max-width:1199px) {
+    .calendar-header {margin:31px 0}
+    .calendar-header-view {display:none}
+}
+
+.calendar-list {display:table; width:100%; border:4px solid #ececec; margin:31px 0}
+.calendar-headers {display:table-row; background:#ececec; color:#000}
+.calendar-headers::before,
+.calendar-headers::after {content:""; display:table-cell; width:24px}
+.calendar-header-01 {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0}
+.calendar-header-02 {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0; width:182px}
+.calendar-header-03 {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0; width:260px}
+.calendar-header-04 {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0; width:174px}
+.calendar-header-05 {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0; width:234px}
+.calendar-item {display:table-row; text-decoration:none; font-weight:bold; font-size:20px; line-height:28px; cursor:pointer}
+@media screen and (min-width:1200px) {
+    .calendar-item:hover {background:#f3f3f3}
+}
+.calendar-item::before,
+.calendar-item::after {content:""; display:table-cell; width:24px; border-top:2px solid #f9f9f9}
+.calendar-headers+.tour-item::before {border-top:none}
+.calendar-headers+.tour-item::after {border-top:none}
+.calendar-item-01,
+.calendar-item-02,
+.calendar-item-03,
+.calendar-item-04,
+.calendar-item-05 {display:table-cell; vertical-align:middle; padding:10px 0; border-top:2px solid #ececec}
+.calendar-headers+.calendar-item .calendar-item-01,
+.calendar-headers+.calendar-item .calendar-item-02,
+.calendar-headers+.calendar-item .calendar-item-03,
+.calendar-headers+.calendar-item .calendar-item-04,
+.calendar-headers+.calendar-item .calendar-item-05 {border-top:none; padding-top:24px}
+.calendar-item:last-child .calendar-item-01,
+.calendar-item:last-child .calendar-item-02,
+.calendar-item:last-child .calendar-item-03,
+.calendar-item:last-child .calendar-item-04,
+.calendar-item:last-child .calendar-item-05 {padding-bottom:22px}
+.calendar-item-01 {color:#000; white-space:nowrap}
+.calendar-item-02 {width:182px; color:#000; white-space:nowrap}
+.calendar-item-03 {width:260px; color:#000}
+.calendar-item-04 {width:174px; color:#000; font-size:30px}
+.calendar-item-05 {width:234px; color:#000}
+.calendar-item-team-our {color:#908c94}
+.calendar-item-date {display:inline-block; vertical-align:middle}
+.calendar-item-timezone {display:inline-block; vertical-align:middle; font-size:12px; text-transform:upppercase; color:#c4c4c4; padding:0 0 0 21px; margin:0 0 0 5px; position:relative}
+.calendar-item-timezone::before {content:""; display:block; width:17px; height:17px; background:url(../images/calendar-item-timezone.png); position:absolute; left:0; top:6px}
+.calendar-item-ctrl-item {display:inline-block; vertical-align:middle; margin:0 0 0 5px; position:relative}
+.calendar-item-ctrl-item:first-child {margin:0}
+.calendar-item-ctrl-item-icon img {display:block}
+.calendar-item-ctrl-hover {position:absolute; left:-9999px; top:-9999px}
+.calendar-item-ctrl-item-title {display:none}
+.calendar-item-arrow {display:none}
+@media screen and (min-width:1200px) {
+    .calendar-item:hover .calendar-item-01,
+    .calendar-item:hover .calendar-item-02,
+    .calendar-item:hover .calendar-item-03,
+    .calendar-item:hover .calendar-item-04,
+    .calendar-item:hover .calendar-item-05,
+    .calendar-item:hover .calendar-item-team-our {color:#e3000f}
+    .calendar-item:hover .calendar-item-timezone {color:#e3000f}
+    .calendar-item:hover .calendar-item-timezone::before {background-position:left -17px}
+    .calendar-item:hover .calendar-item-ctrl-default {position:absolute; left:-9999px; top:-9999px}
+    .calendar-item:hover .calendar-item-ctrl-hover {position:relative; left:auto; top:auto}
+    .calendar-item-ctrl-item:hover .calendar-item-ctrl-item-title {display:block; position:absolute; left:50%; top:-31px; white-space:nowrap; color:#fff; font-size:11px; line-height:19px; letter-spacing:0.22px; padding:0 7px; background:#e3000f; border-radius:3px; transform:translateX(-50%)}
+    .calendar-item-ctrl-item:hover .calendar-item-ctrl-item-title::after {content:""; display:block; position:absolute; left:50%; bottom:-6px; margin-left:-6px; border-top:6px solid #e3000f; border-left:6px solid transparent; border-right:6px solid transparent}
+}
+
+@media screen and (max-width:1199px) {
+    .calendar-list {display:block; width:auto; margin:21px -40px}
+    .calendar-headers {display:block; overflow:hidden; position:relative}
+    .calendar-headers::before,
+    .calendar-headers::after {display:none}
+    .calendar-header-01,
+    .calendar-header-02,
+    .calendar-header-03,
+    .calendar-header-04,
+    .calendar-header-05 {display:block; float:left}
+    .calendar-header-01 {padding-left:34px; width:28.42%}
+    .calendar-header-02 {display:none}
+    .calendar-header-03 {width:26.32%; padding-left:20px}
+    .calendar-header-04 {width:12.5%; padding-left:20px}
+    .calendar-header-05 {width:32.76%; padding-left:20px}
+    .calendar-item {display:block; position:relative; font-size:18px; line-height:24px; overflow:hidden}
+    .calendar-item.open {padding:0 0 10px 0}
+    .calendar-item::before,
+    .calendar-item::after {display:none}
+    .calendar-item-date {display:block}
+    .calendar-item-timezone {display:none}
+    .calendar-item.open .calendar-item-timezone {display:inline-block; margin:10px 0 0 0; line-height:30px; position:relative; left:50%; transform:translateX(-50%); color:#e3000f}
+    .calendar-item-timezone::before {background-position:left -17px}
+    .calendar-item-01,
+    .calendar-item-02,
+    .calendar-item-03,
+    .calendar-item-04,
+    .calendar-item-05 {display:block; float:left}
+    .calendar-item-01 {padding-left:34px; width:28.42%}
+    .calendar-item-02 {display:none}
+    .calendar-item.open .calendar-item-02 {display:block; position:absolute; left:61%; bottom:20px; border:none; padding:0; transform:translateX(-50%); width:auto}
+    .calendar-item-ctrl-default {position:absolute; left:-9999px; top:-9999px}
+    .calendar-item-ctrl-hover {position:relative; left:auto; top:auto}
+    .calendar-item-03 {width:26.32%; padding-left:20px}
+    .calendar-item-04 {width:12.5%; padding-left:20px; font-size:20px}
+    .calendar-item-05 {width:32.76%; padding-left:20px; padding-right:50px}
+    .calendar-item-arrow {display:block; position:absolute; right:0; top:0; width:55px; height:50px; background:url(../images/team-item-arrow.png) no-repeat center}
+    .calendar-headers+.calendar-item .calendar-item-arrow {top:10px}
+    .calendar-item.open .calendar-item-arrow {transform:rotate(-180deg)}
+}
+
+@media screen and (max-width:767px) {
+    .calendar-list {margin:21px -20px}
+    .calendar-headers {display:none}
+    .calendar-item {border-top:2px solid #ececec; margin:0 -4px; padding:22px 20px 6px 20px; font-size:13px; line-height:21px; overflow:hidden}
+    .calendar-headers+.calendar-item {border-top:none}
+    .calendar-item.open {background:#f4f4f4; padding:22px 20px 64px 20px}
+    .calendar-item-01 {float:none; display:block; width:auto; padding:0 0 6px 0; border:none}
+    .calendar-item:last-child .calendar-item-01 {padding:0 0 6px 0}
+    .calendar-headers+.calendar-item .calendar-item-01 {padding:0 0 6px 0; border-top:none}
+    .calendar-item-date {display:inline-block}
+    .calendar-item-timezone,
+    .calendar-item.open .calendar-item-timezone {display:inline-block; margin:0 0 0 5px; font-size:13px; line-height:21px; left:auto; transform:none; color:#c4c4c4}
+    .calendar-item-timezone::before,
+    .calendar-item.open .calendar-item-timezone::before {background-position:left top; top:2px}
+    .calendar-item-03 {float:none; display:inline-block; width:auto; padding:0; border:none; vertical-align:top}
+    .calendar-item:last-child .calendar-item-03 {padding:0}
+    .calendar-headers+.calendar-item .calendar-item-03 {padding:0}
+    .calendar-item-04 {float:none; display:inline-block; width:55px; padding:0; border:none; text-align:center; font-size:15px; vertical-align:top}
+    .calendar-item:last-child .calendar-item-04 {padding:0}
+    .calendar-headers+.calendar-item .calendar-item-04 {padding:0}
+    .calendar-item-05 {float:none; display:inline-block;  width:auto; padding:0; border:none; vertical-align:top}
+    .calendar-item:last-child .calendar-item-05 {padding:0}
+    .calendar-headers+.calendar-item .calendar-item-05 {padding:0}
+    .calendar-item-arrow {top:10px}
+    .calendar-item.open .calendar-item-02 {left:20px; bottom:30px; transform:none}
+}
+
+.game-team-list {position:relative; overflow:hidden; margin:21px 0; white-space:nowrap}
+.game-team-list-inner {display:table; width:1200px; border:4px solid #ececec}
+.game-team-headers {display:table-row; background:#ececec; color:#000}
+.game-team-header-number {display:table-cell; vertical-align:middle; text-align:center; padding:0 0 4px 0}
+.game-team-header-name {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0; width:100%}
+.game-team-header-info {display:table-cell; vertical-align:middle; text-align:left; padding:0 20px 4px 20px; text-align:center}
+.game-team-item {display:table-row; text-decoration:none; color:#000}
+@media screen and (min-width:1200px) {
+    .game-team-item:hover {color:#e3000f; background:#f5f5f5}
+}
+.game-team-item-number {display:table-cell; vertical-align:middle; width:84px; padding:14px 15px 16px 15px; text-align:center; border-top:2px solid #ececec}
+.game-team-item-number-inner {width:24px; height:30px; margin:0 auto; background:url(../images/team-number.png); text-align:center; color:#fff; font-weight:bold; font-size:16px; line-height:27px; padding:5px 0 0 0}
+.game-team-item-name {display:table-cell; vertical-align:middle; padding:14px 15px 16px 0; font-size:20px; line-height:28px; border-top:2px solid #ececec}
+.game-team-item-info {display:table-cell; vertical-align:middle; padding:14px 15px 16px 15px; text-align:center; font-weight:bold; font-size:13px; line-height:21px; border-left:2px solid #ececec; border-top:2px solid #ececec}
+.game-team-item-all {color:#e3000f}
+.game-team-item-all .game-team-item-name {vertical-align:top; font-weight:bold}
+.game-team-item-all .game-team-item-info {vertical-align:top}
+.game-team-item-coach {text-transform:none; color:#000; padding:23px 0 0 0}
+div.game-team-item .game-team-item-number-inner {background:url(../images/team-number-2.png)}
+
+@media screen and (max-width:1199px) {
+    .game-team-list {margin:21px -40px}
+    .game-team-item-name {font-size:18px; line-height:24px}
+    .game-team-list-inner {border-left:none; border-right:none; width:auto}
+}
+
+@media screen and (max-width:767px) {
+    .game-team-list {margin:21px -20px}
+}
 
 footer {background:#201b24; height:473px; margin:-473px 0 0 0; position:relative}
 
