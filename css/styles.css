@@ -1492,6 +1492,7 @@ header {background:#100d13; position:relative; z-index:20}
 .content-side .news-other:first-child {margin-top:0; background:#f3f3f3 url(../images/side-rating-table.png) repeat-x}
 .dance-list+.content-wrap+.content-side .news-other:first-child {background:#f3f3f3}
 .game-team-list+.content-wrap+.content-side .news-other:first-child {background:#f3f3f3}
+.team-detail+.content-wrap+.content-side .news-other:first-child {background:#f3f3f3}
 .content-side .news-other h2 {margin-top:0}
 .news-other .news-list {margin:-28px 0 0 0}
 .news-other .news-item {display:block; padding:0; width:auto}
@@ -1858,8 +1859,8 @@ header {background:#100d13; position:relative; z-index:20}
 }
 .dance-item a::before {content:""; display:block; height:4px; position:absolute; left:0; bottom:0; right:0; background:#ececec}
 .dance-item a::after {content:""; display:block; height:4px; position:absolute; left:0; width:0; bottom:0; background:#e3000f; transition:all 0.4s}
-@media dance and (min-width:1200px) {
-    .management-item a:hover::after {width:100%}
+@media screen and (min-width:1200px) {
+    .dance-item a:hover::after {width:100%}
 }
 .dance-item-photo {float:left; width:78px; position:relative; margin:4px 0 0 0}
 .dance-item-photo::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; opacity:0; background:#1b1223; transition:all 0.4s}
@@ -2443,7 +2444,7 @@ header {background:#100d13; position:relative; z-index:20}
 .calendar-item-05 {width:234px; color:#000}
 .calendar-item-team-our {color:#908c94}
 .calendar-item-date {display:inline-block; vertical-align:middle}
-.calendar-item-timezone {display:inline-block; vertical-align:middle; font-size:12px; text-transform:upppercase; color:#c4c4c4; padding:0 0 0 21px; margin:0 0 0 5px; position:relative}
+.calendar-item-timezone {display:inline-block; vertical-align:middle; font-size:12px; text-transform:uppercase; color:#c4c4c4; padding:0 0 0 21px; margin:0 0 0 5px; position:relative}
 .calendar-item-timezone::before {content:""; display:block; width:17px; height:17px; background:url(../images/calendar-item-timezone.png); position:absolute; left:0; top:6px}
 .calendar-item-ctrl-item {display:inline-block; vertical-align:middle; margin:0 0 0 5px; position:relative}
 .calendar-item-ctrl-item:first-child {margin:0}
@@ -2534,12 +2535,57 @@ header {background:#100d13; position:relative; z-index:20}
     .calendar-item.open .calendar-item-02 {left:20px; bottom:30px; transform:none}
 }
 
+.game {margin:31px 0; border:4px solid #cecece; padding:40px 0 37px 0}
+.game::after {content:""; display:block; clear:both}
+.game-info {float:left; width:700px; padding:0 0 0 35px}
+.game-info-logo-1 {float:left; width:200px; text-align:center; padding:0 15px}
+.game-info-logo-2 {float:right; width:200px; text-align:center; padding:0 15px}
+.game-info-detail {margin:0 200px; padding:0 15px 0 15px; text-align:center}
+.game-info-results {text-align:center; font-weight:bold; font-size:45px; line-height:50px; color:#000; padding:60px 0 0 0}
+.game-info-time {font-weight:bold; text-transform:uppercase; color:#000; padding:15px 0 0 0}
+.game-info-timezone {display:inline-block; vertical-align:top; position:relative; color:#c4c4c4; padding:0 0 0 21px; margin:0 0 0 5px}
+.game-info-timezone::before {content:""; display:block; width:17px; height:17px; background:url(../images/calendar-item-timezone.png); position:absolute; left:0; top:2px}
+.game-info-place {color:#000; padding:7px 0 0 0}
+.game-info-ctrl {padding:14px 0 0 0}
+.game-stat {float:right; width:410px; margin:7px 48px 0 0}
+.game-stat-inner {display:table; width:100%; white-space:nowrap}
+.game-stat-header {display:table-row}
+.game-stat-header-item {display:table-cell; vertical-align:top; font-weight:bold; color:#000; text-align:center; padding:0 0 13px 0}
+.game-stat-row {display:table-row}
+.game-stat-row-item {display:table-cell; vertical-align:top; font-weight:bold; color:#000; text-align:center; border-top:2px solid #ececec; padding:12px 0 11px 0}
+.game-stat-row-item:first-child {text-align:left; text-transform:uppercase; color:#bdb9c0; font-size:12px}
+.game-stat-row-summ .game-stat-row-item {color:#e3000f}
+.game-stat-row-summ .game-stat-row-item:first-child {color:#000}
+
+@media screen and (max-width:1199px) {
+    .game {padding:30px 45px 40px 45px}
+    .game-info {float:none; width:auto; padding:0}
+    .game-info::after {content:""; display:block; clear:both}
+    .game-info-logo-1 {width:150px; margin:0 0 0 15px}
+    .game-info-logo-2 {width:150px; margin:0 15px 0 0}
+    .game-info-detail {margin:0 185px; padding:0}
+    .game-info-results {padding:18px 0 0 0}
+    .game-stat {float:none; width:auto; margin:38px 0 0 0}
+}
+
+@media screen and (max-width:767px) {
+    .game {padding:24px 20px 10px 20px}
+    .game-info-logo-1 {width:50%; margin:0; padding:0 15px}
+    .game-info-logo-2 {width:50%; margin:0; padding:0 15px}
+    .game-info-detail {margin:0; float:left; width:100%}
+    .game-info-results {font-size:37px; padding:0}
+    .game-stat-header {white-space:normal}
+    .game-stat-header-item {vertical-align:middle; line-height:13px}
+}
+
 .game-team-list {position:relative; overflow:hidden; margin:21px 0; white-space:nowrap}
 .game-team-list-inner {display:table; width:1200px; border:4px solid #ececec}
+.game-team-list-team-detail .game-team-list-inner {width:800px}
 .game-team-headers {display:table-row; background:#ececec; color:#000}
 .game-team-header-number {display:table-cell; vertical-align:middle; text-align:center; padding:0 0 4px 0}
 .game-team-header-name {display:table-cell; vertical-align:middle; text-align:left; padding:0 0 4px 0; width:100%}
 .game-team-header-info {display:table-cell; vertical-align:middle; text-align:left; padding:0 20px 4px 20px; text-align:center}
+.game-team-list-team-detail .game-team-header-info {padding:0 10px 4px 10px}
 .game-team-item {display:table-row; text-decoration:none; color:#000}
 @media screen and (min-width:1200px) {
     .game-team-item:hover {color:#e3000f; background:#f5f5f5}
@@ -2548,6 +2594,7 @@ header {background:#100d13; position:relative; z-index:20}
 .game-team-item-number-inner {width:24px; height:30px; margin:0 auto; background:url(../images/team-number.png); text-align:center; color:#fff; font-weight:bold; font-size:16px; line-height:27px; padding:5px 0 0 0}
 .game-team-item-name {display:table-cell; vertical-align:middle; padding:14px 15px 16px 0; font-size:20px; line-height:28px; border-top:2px solid #ececec}
 .game-team-item-info {display:table-cell; vertical-align:middle; padding:14px 15px 16px 15px; text-align:center; font-weight:bold; font-size:13px; line-height:21px; border-left:2px solid #ececec; border-top:2px solid #ececec}
+.game-team-list-team-detail .game-team-item-info {padding:14px 10px 16px 10px}
 .game-team-item-all {color:#e3000f}
 .game-team-item-all .game-team-item-name {vertical-align:top; font-weight:bold}
 .game-team-item-all .game-team-item-info {vertical-align:top}
@@ -2563,6 +2610,100 @@ div.game-team-item .game-team-item-number-inner {background:url(../images/team-n
 @media screen and (max-width:767px) {
     .game-team-list {margin:21px -20px}
 }
+
+@media screen and (max-width:1199px) {
+    .team-detail-header h1 {display:none}
+    .team-detail-header .content-header-filter {float:left}
+}
+
+@media screen and (max-width:767px) {
+    .team-detail-header {margin:21px 0}
+    .team-detail-header .content-header-filter-current span {display:block; padding:0; margin:0}
+    .team-detail-header .content-header-filter-current::after {top:54px}
+}
+
+.team-detail-name-mobile {display:none}
+
+@media screen and (max-width:1199px) {
+    .team-detail-name-mobile {display:block}
+}
+
+@media screen and (max-width:767px) {
+    .team-detail-photo {margin-left:-20px; margin-right:-20px}
+}
+
+.team-detail::after {content:""; display:block; clear:both}
+.team-detail-info {float:left; width:493px}
+.team-detail-info-number {display:inline-block; vertical-align:middle; width:24px; height:30px; margin:-4px 0 0 5px; background:url(../images/team-number.png); text-align:center; color:#fff; font-weight:bold; font-size:16px; line-height:27px; padding:5px 0 0 0}
+.team-detail-info .persone-info {padding-bottom:18px}
+.team-detail-info .persone-info table td:nth-child(2) {color:#000}
+.team-detail-career {float:left; width:493px; margin:0 0 0 80px}
+.team-detail-career p {margin:8px 0 0 0; padding:0; color:#000; font-weight:bold}
+.team-detail-career p span {color:#908c95; margin:0 15px 0 0}
+
+@media screen and (max-width:767px) {
+    .team-detail-career p span {margin:0 5px 0 0}
+}
+
+.news-other-team-detail {margin-top:6px}
+
+@media screen and (max-width:1199px) {
+    .team-detail-info {float:none; width:auto}
+    .team-detail-career {float:none; width:auto; margin:0}
+    .news-other-team-detail {margin:40px -40px}
+    .game-team-list-team-detail {margin-left:0; margin-right:0}
+}
+
+@media screen and (max-width:767px) {
+    .news-other-team-detail {margin:40px -20px}
+}
+
+.team-detail-games {margin:21px 0}
+.team-detail-games .btn img {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0; transform:rotate(-90deg)}
+.team-detail-games.open .btn img {transform:rotate(90deg)}
+
+.team-detail-games-content {display:none; margin:21px 0}
+.team-detail-games-content.open {display:block}
+
+.calendar-cards {border-top:4px solid #ececec; border-left:4px solid #ececec; margin:31px 0}
+.calendar-cards::after {content:""; display:block; clear:both}
+.calendar-cards-game {float:left; width:25%; height:365px; border-right:4px solid #ececec; border-bottom:4px solid #ececec; cursor:pointer; position:relative}
+.calendar-cards-game:hover::before {content:""; display:block; position:absolute; left:-4px; top:-4px; right:-4px; bottom:-4px; border:4px solid #e3000f; background:#f6f6f6}
+.calendar-cards-game-logos {margin:10px 0 0 0; padding:10px 40px; font-size:0; line-height:0; letter-spacing:-1px; position:relative; line-height:100px; height:120px; text-align:center}
+.calendar-cards-game-logos img {vertical-align:middle; margin:0 12px; opacity:0.8; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%); filter:gray; transition:all 0.2s}
+.calendar-cards-game:hover .calendar-cards-game-logos img {opacity:1; -webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+.calendar-cards-game-result {position:relative; font-weight:bold; font-size:45px; line-height:50px; color:#000; text-align:center}
+.calendar-cards-game-date {font-weight:bold; position:relative; font-size:20px; line-height:28px; color:#908c94; text-align:center; padding:12px 0 0 0}
+.calendar-cards-game:hover .calendar-cards-game-date {color:#000}
+.calendar-cards-game-timezone {text-align:center; position:relative; color:#c5c5c5; padding:7px 0 0 0}
+.calendar-cards-game:hover .calendar-cards-game-timezone {color:#000}
+.calendar-cards-game-timezone span {display:inline-block}
+.calendar-cards-game-timezone span::before {content:""; display:inline-block; vertical-align:middle; width:17px; height:17px; background:url(../images/calendar-game-time.png); margin:-2px 4px 0 0}
+.calendar-cards-game:hover .calendar-cards-game-timezone span::before {background-position:left -17px}
+.calendar-cards-game-place {position:relative; text-align:center; color:#908c94; padding:5px 0 0 0}
+.calendar-cards-game:hover .calendar-cards-game-place {color:#000}
+.calendar-cards-game-ctrl {position:relative; text-align:center; padding:20px 0 0 0}
+.calendar-cards-game:hover .calendar-item-ctrl-default {position:absolute; left:-9999px; top:-9999px}
+.calendar-cards-game:hover .calendar-item-ctrl-hover {position:relative; left:auto; top:auto}
+
+.calendar-playoff {margin:0 -32px; position:relative}
+.calendar-playoff::before {content:""; display:block; width:540px; height:537px; position:absolute; left:355px; top:150px; background:url(../images/calendar-playoff-lines.png); pointer-events:none; z-index:1}
+.calendar-playoff::after {content:""; display:block; clear:both}
+.calendar-playoff-round {float:left; width:33.33%; padding:0 32px}
+.calendar-playoff-round:nth-child(2) {padding-top:179px}
+.calendar-playoff-round:nth-child(3) {padding-top:267px}
+.calendar-playoff-round h2 {margin:0}
+.calendar-playoff-game {display:block; margin:20px 0 0 0; height:159px; background:#f3f3f3; color:#000; text-decoration:none; position:relative; font-weight:bold; font-size:20px; line-height:24px; white-space:nowrap; padding:34px 50px 0 20px}
+.calendar-playoff-game:hover {color:#e3000f; background:#fde1e2}
+.calendar-playoff-game-team {display:table; width:100%}
+.calendar-playoff-game-team-logo {display:table-cell; vertical-align:middle; width:75px; text-align:center; line-height:0; height:47px}
+.calendar-playoff-game-team-logo img {-webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%); filter:gray; transition:all 0.2s}
+.calendar-playoff-game:hover .calendar-playoff-game-team-logo img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+.calendar-playoff-game-team-self .calendar-playoff-game-team-logo img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+.calendar-playoff-game-team-title {display:table-cell; vertical-align:middle; height:47px}
+.calendar-playoff-game-team-self {color:#e3000f}
+.calendar-playoff-game-team-points {display:table-cell; vertical-align:middle; text-align:right; height:47px}
+.calendar-playoff-game-date {position:absolute; left:95px; top:12px; font-size:12px; letter-spacing:0.48px; text-transform:uppercase}
 
 footer {background:#201b24; height:473px; margin:-473px 0 0 0; position:relative}
 

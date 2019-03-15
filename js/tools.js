@@ -401,6 +401,26 @@ $(document).ready(function() {
         }
     });
 
+    $('.team-detail-games .btn').click(function(e) {
+        $('.team-detail-games').toggleClass('open');
+        $('.team-detail-games-content').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.calendar-cards-game[data-href]', function() {
+        window.location = $(this).attr('data-href');
+    });
+
+    $('body').on('mouseover', '.calendar-cards-game[data-href] a', function() {
+        $('body').off('click', '.calendar-cards-game[data-href]');
+    });
+
+    $('body').on('mouseout', '.calendar-cards-game[data-href] a', function() {
+        $('body').on('click', '.calendar-cards-game[data-href]', function() {
+            window.location = $(this).attr('data-href');
+        });
+    });
+
 });
 
 function initForm(curForm) {
