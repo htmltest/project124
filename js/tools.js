@@ -154,6 +154,37 @@ $(document).ready(function() {
         }
     });
 
+    var gallery = $('.main-media-gallery-persone .main-media-gallery-item a');
+    $('.main-media-gallery-persone .main-media-gallery-item a').on('click', function(e) {
+        var totalSlides = +$(this).parents('.main-media-gallery').slick('getSlick').slideCount;
+        var dataIndex = +$(this).parents('.main-media-gallery').data('slick-index');
+        var trueIndex;
+        switch(true) {
+            case (dataIndex < 0):
+                trueIndex = totalSlides + dataIndex;
+                break;
+            case (dataIndex >= totalSlides):
+                trueIndex = dataIndex%totalSlides;
+                break;
+            default:
+                trueIndex = dataIndex;
+        }
+        $.fancybox.open(gallery, {
+            buttons : [
+                'close'
+            ],
+            lang : 'ru',
+            i18n : {
+                'ru' : {
+                    CLOSE   : 'Закрыть',
+                    NEXT    : 'Вперед',
+                    PREV    : 'Назад'
+                }
+            }
+        }, trueIndex);
+        e.preventDefault();
+    });
+
     $('.main-media-gallery').slick({
         infinite: true,
         variableWidth: true,
